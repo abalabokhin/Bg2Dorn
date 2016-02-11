@@ -1315,22 +1315,22 @@ Global("OHR_WilsonTreeofLife","GLOBAL",0)
 END
 
 IF ~~ THEN BEGIN 27 // from:
-  SAY @27 /* ~I would see him live again a thousand times that I might slay him a thousand times more—but a single death with suffice for our purposes. You are victorious, <CHARNAME>!~ #98514 */
+  SAY @27 /* ~I would see him live again a thousand times that I might slay him a thousand times moreÂ—but a single death with suffice for our purposes. You are victorious, <CHARNAME>!~ #98514 */
   IF ~~ THEN EXTERN ~PLAYER1~ 17
 END
 
 IF ~~ THEN BEGIN 28 // from:
   SAY @28 /* ~What's the problem, <CHARNAME>?~ #98523 */
   IF ~~ THEN REPLY @29 /* ~No problem, Dorn. Why do you ask?~ #98536 */ GOTO 29
-  IF ~~ THEN REPLY @30 /* ~I'm not sure. For a moment there, it felt like—I wasn't myself. Like I was losing control...~ #98537 */ GOTO 32
+  IF ~~ THEN REPLY @30 /* ~I'm not sure. For a moment there, it felt likeÂ—I wasn't myself. Like I was losing control...~ #98537 */ GOTO 32
   IF ~~ THEN REPLY @31 /* ~My problem is with half-orcs poking their tusks into my business.~ #98538 */ GOTO 30
 END
 
 IF ~~ THEN BEGIN 29 // from: 28.0
   SAY @32 /* ~You faltered there a moment. It was subtle, but noticeable.~ #98524 */
   IF ~~ THEN REPLY @33 /* ~You see issues where none exist, Dorn. Let's carry on.~ #98539 */ GOTO 31
-  IF ~~ THEN REPLY @34 /* ~I felt, for a second, like I was—was losing control...~ #98540 */ GOTO 32
-  IF ~~ THEN REPLY @35 /* ~You see what you want to see, half-orc. You are a predator, looking for weakness—I have none.~ #98541 */ EXIT
+  IF ~~ THEN REPLY @34 /* ~I felt, for a second, like I wasÂ—was losing control...~ #98540 */ GOTO 32
+  IF ~~ THEN REPLY @35 /* ~You see what you want to see, half-orc. You are a predator, looking for weaknessÂ—I have none.~ #98541 */ EXIT
 END
 
 IF ~~ THEN BEGIN 30 // from: 28.2
@@ -1362,7 +1362,7 @@ IF ~~ THEN BEGIN 35 // from:
   SAY @41 /* ~You tremble like a child, <CHARNAME>. What's the problem now?~ #98530 */
   IF ~~ THEN REPLY @42 /* ~Get away from me, Dorn. I don't know what's happening.~ #98542 */ DO ~SetGlobal("EndangerLovedOne","GLOBAL",93)
 ~ GOTO 36
-  IF ~~ THEN REPLY @43 /* ~Where do I begin, you bloody great oaf? Oh, I know—I'M LOSING CONTROL!~ #98543 */ DO ~SetGlobal("EndangerLovedOne","GLOBAL",93)
+  IF ~~ THEN REPLY @43 /* ~Where do I begin, you bloody great oaf? Oh, I knowÂ—I'M LOSING CONTROL!~ #98543 */ DO ~SetGlobal("EndangerLovedOne","GLOBAL",93)
 ~ GOTO 36
   IF ~~ THEN REPLY @44 /* ~No problem at all, unless you get in my way.~ #98544 */ DO ~SetGlobal("EndangerLovedOne","GLOBAL",93)
 ~ GOTO 36
@@ -1385,7 +1385,7 @@ IF ~~ THEN BEGIN 37 // from:
 END
 
 IF ~~ THEN BEGIN 38 // from: 37.0
-  SAY @50 /* ~The power of the gods cannot be controlled—it can only be savored. I advise you to do so as often as possible.~ #98533 */
+  SAY @50 /* ~The power of the gods cannot be controlledÂ—it can only be savored. I advise you to do so as often as possible.~ #98533 */
   IF ~~ THEN EXIT
 END
 
@@ -1560,7 +1560,7 @@ END
 IF ~~ THEN BEGIN 60 // from: 59.2
   SAY @90 /* ~A tempting offer. Or did you mean it as a threat?~ #96423 */
   IF ~~ THEN REPLY @91 /* ~You can't tell...? Your loss, half-orc.~ #96424 */ EXIT
-  IF ~~ THEN REPLY @92 /* ~When—IF I make you an offer, you'll know it.~ #96425 */ GOTO 61
+  IF ~~ THEN REPLY @92 /* ~WhenÂ—IF I make you an offer, you'll know it.~ #96425 */ GOTO 61
   IF ~~ THEN REPLY @93 /* ~It was definitely a threat.~ #96426 */ GOTO 66
 END
 
@@ -1715,7 +1715,7 @@ IF ~~ THEN BEGIN 81 // from: 79.1
 END
 
 IF ~~ THEN BEGIN 82 // from: 80.0 79.2
-  SAY @135 /* ~Then strike me down—if you can.~ #96470 */
+  SAY @135 /* ~Then strike me downÂ—if you can.~ #96470 */
   IF ~~ THEN GOTO 83
 END
 
@@ -1999,7 +1999,7 @@ END
 IF WEIGHT #14 /* Triggers after states #: 843 844 845 even though they appear after this state */
 ~  Global("OHD_lt4","GLOBAL",2)
 ~ THEN BEGIN 120 // from:
-  SAY @218 /* ~Such strength—such power! You are everything I've ever wanted, <CHARNAME>!~ #96574 */
+  SAY @218 /* ~Such strengthÂ—such power! You are everything I've ever wanted, <CHARNAME>!~ #96574 */
   IF ~~ THEN DO ~SetGlobal("OHD_lt4","GLOBAL",3)
 ~ GOTO 121
 END
@@ -2173,14 +2173,14 @@ IF ~~ THEN BEGIN 140 // from: 139.2 138.0 137.2 136.2
   IF ~  Global("OHD_perfect","LOCALS",1)
 ~ THEN REPLY @279 /* ~I wasn't joking. We are perfect for one another.~ #96507 */ GOTO 139
   IF ~~ THEN REPLY @280 /* ~And that's why we can never be more than professional colleagues.~ #96332 */ GOTO 134
-  IF ~~ THEN REPLY @281 /* ~Me and you, romantically involved? You're wrong, Dorn—that is hilarious.~ #96333 */ GOTO 134
+  IF ~~ THEN REPLY @281 /* ~Me and you, romantically involved? You're wrong, DornÂ—that is hilarious.~ #96333 */ GOTO 134
 END
 
 IF ~~ THEN BEGIN 141 // from: 137.0 136.0
-  SAY @282 /* ~What the future holds—for us.~ [OH96334] #96334 */
+  SAY @282 /* ~What the future holdsÂ—for us.~ [OH96334] #96334 */
   IF ~~ THEN REPLY @283 /* ~Much the same as the past, I suspect. You would have more?~ #96335 */ GOTO 155
   IF ~~ THEN REPLY @284 /* ~Let's live in the present and see where that takes us, all right?~ #96336 */ GOTO 139
-  IF ~~ THEN REPLY @285 /* ~We have no future, Dorn. Our fates seem to be entwined—but that is all that will be entwined.~ #96337 */ GOTO 134
+  IF ~~ THEN REPLY @285 /* ~We have no future, Dorn. Our fates seem to be entwinedÂ—but that is all that will be entwined.~ #96337 */ GOTO 134
 END
 
 IF ~~ THEN BEGIN 142 // from: 140.0
@@ -2203,7 +2203,7 @@ IF ~~ THEN BEGIN 143 // from: 142.0
 END
 
 IF ~~ THEN BEGIN 144 // from: 143.0
-  SAY @295 /* ~The weak break. The strong stand triumphant over all that would see them broken—or bent.~ [OH96346] #96346 */
+  SAY @295 /* ~The weak break. The strong stand triumphant over all that would see them brokenÂ—or bent.~ [OH96346] #96346 */
   IF ~~ THEN DO ~SetGlobal("DornRomanceActive","GLOBAL",3)
 ~ EXIT
 END
@@ -2211,7 +2211,7 @@ END
 IF ~~ THEN BEGIN 145 // from: 143.1
   SAY @296 /* ~Perhaps you will yet.~ [OH96347] #96347 */
   IF ~~ THEN REPLY @297 /* ~Perhaps.~ #96348 */ GOTO 139
-  IF ~~ THEN REPLY @298 /* ~Oh, I'm certain I will—just not for you.~ #96349 */ GOTO 134
+  IF ~~ THEN REPLY @298 /* ~Oh, I'm certain I willÂ—just not for you.~ #96349 */ GOTO 134
   IF ~~ THEN REPLY @299 /* ~You'll never know.~ #96350 */ EXIT
 END
 
@@ -2221,7 +2221,7 @@ IF ~~ THEN BEGIN 146 // from: 134.1
 ~ GOTO 158
   IF ~~ THEN REPLY @302 /* ~We're too different, Dorn. And I doubt either of us is prepared to compromise much.~ #96353 */ DO ~SetGlobal("DornRomanceActive","GLOBAL",3)
 ~ GOTO 147
-  IF ~~ THEN REPLY @303 /* ~Aye, it would—but you'll never know.~ #96354 */ GOTO 148
+  IF ~~ THEN REPLY @303 /* ~Aye, it wouldÂ—but you'll never know.~ #96354 */ GOTO 148
 END
 
 IF ~~ THEN BEGIN 147 // from: 156.0 146.1
@@ -2257,7 +2257,7 @@ END
 
 IF ~~ THEN BEGIN 152 // from: 160.0 153.0 151.0
   SAY @315 /* ~You'll like it, I assure you.~ [OH96367] #96367 */
-  IF ~~ THEN REPLY @316 /* ~I hope you're right, Dorn—for your sake.~ #96368 */ GOTO 154
+  IF ~~ THEN REPLY @316 /* ~I hope you're right, DornÂ—for your sake.~ #96368 */ GOTO 154
   IF ~~ THEN REPLY @317 /* ~I'm sure I will.~ #96369 */ GOTO 157
   IF ~~ THEN REPLY @318 /* ~We'll see. I am not easily impressed.~ #96370 */ GOTO 154
 END
@@ -2397,7 +2397,7 @@ Enemy()
 END
 
 IF ~~ THEN BEGIN 173 // from: 171.0
-  SAY @361 /* ~This is—~ #96677 */
+  SAY @361 /* ~This isÂ—~ #96677 */
   IF ~~ THEN GOTO 174
 END
 
@@ -2458,7 +2458,7 @@ END
 
 IF ~~ THEN BEGIN 181 // from: 180.2 180.1 180.0
   SAY @374 /* ~How do you intend to carry out his legacy? ~ #96690 */
-  IF ~~ THEN REPLY @375 /* ~Carry out his— Are you insane? Why would I want to do that?~ #96698 */ GOTO 182
+  IF ~~ THEN REPLY @375 /* ~Carry out hisÂ— Are you insane? Why would I want to do that?~ #96698 */ GOTO 182
   IF ~~ THEN REPLY @376 /* ~By doing exactly what I'm doing.~ #96699 */ GOTO 183
   IF ~~ THEN REPLY @377 /* ~*I* am his legacy, and I will do what I please. ~ #96700 */ GOTO 182
 END
@@ -3080,14 +3080,14 @@ IF ~~ THEN BEGIN 272 // from: 276.0 275.1 273.1 270.3 268.4 268.3
 END
 
 IF ~~ THEN BEGIN 273 // from: 275.0 270.2 268.2
-  SAY @542 /* ~I should send you to the Abyss and let demons gnaw your soul for all eternity for this—push me one more time and I will, I swear it. Get out of my sight! You sicken me.~ [OH95181] #95181 */
+  SAY @542 /* ~I should send you to the Abyss and let demons gnaw your soul for all eternity for thisÂ—push me one more time and I will, I swear it. Get out of my sight! You sicken me.~ [OH95181] #95181 */
   IF ~~ THEN REPLY @543 /* ~She meant nothing to me, Dorn. You are all that truly matters.~ #95194 */ GOTO 274
   IF ~~ THEN REPLY @544 /* ~I sicken you? Wow, I really did mess up, didn't I?~ #95195 */ GOTO 272
-  IF ~~ THEN REPLY @545 /* ~Get over it, Dorn—and soon. I've no patience for your nonsense.~ #95196 */ EXIT
+  IF ~~ THEN REPLY @545 /* ~Get over it, DornÂ—and soon. I've no patience for your nonsense.~ #95196 */ EXIT
 END
 
 IF ~~ THEN BEGIN 274 // from: 273.0
-  SAY @546 /* ~Prove it, <CHARNAME>—if you can. You have your work cut out for you. Fail and you'll have something more cut OUT of you.~ [OH95182] #95182 */
+  SAY @546 /* ~Prove it, <CHARNAME>Â—if you can. You have your work cut out for you. Fail and you'll have something more cut OUT of you.~ [OH95182] #95182 */
   IF ~~ THEN EXIT
 END
 
@@ -3158,7 +3158,7 @@ Enemy()
 END
 
 IF ~~ THEN BEGIN 283 // from:
-  SAY @559 /* ~So be it—the prospect of your soul has always excited my patron!~ [OH74549] #74549 */
+  SAY @559 /* ~So be itÂ—the prospect of your soul has always excited my patron!~ [OH74549] #74549 */
   IF ~~ THEN DO ~SetGlobal("OHD_PLOT","GLOBAL",-1)
 LeaveParty()
 Enemy()
@@ -3428,9 +3428,9 @@ IF ~~ THEN BEGIN 310 // from:
   IF ~  !CheckStatGT(Player1,13,CHR)
 ~ THEN REPLY @611 /* ~Bollard Firejaw is dead. You've done your duty. Let's be away from here before word gets out of what's occurred.~ #74832 */ GOTO 311
   IF ~  CheckStatGT(Player1,14,CHR)
-~ THEN REPLY @612 /* ~Let them talk. The legend of Dorn Il-Khan's power will grow. But for now, we should take our leave—it won't be long before someone raises the alarm.~ #74833 */ GOTO 316
+~ THEN REPLY @612 /* ~Let them talk. The legend of Dorn Il-Khan's power will grow. But for now, we should take our leaveÂ—it won't be long before someone raises the alarm.~ #74833 */ GOTO 316
   IF ~  !CheckStatGT(Player1,14,CHR)
-~ THEN REPLY @612 /* ~Let them talk. The legend of Dorn Il-Khan's power will grow. But for now, we should take our leave—it won't be long before someone raises the alarm.~ #74833 */ GOTO 311
+~ THEN REPLY @612 /* ~Let them talk. The legend of Dorn Il-Khan's power will grow. But for now, we should take our leaveÂ—it won't be long before someone raises the alarm.~ #74833 */ GOTO 311
   IF ~~ THEN REPLY @613 /* ~The truth. There's something I never expected to hear from the mouth of Dorn Il-Khan. You're right, of course. While they live, these people are a threat, and that, I cannot abide.~ #74834 */ GOTO 315
 END
 
@@ -3528,7 +3528,7 @@ IF ~~ THEN BEGIN 321 // from: 320.1
 END
 
 IF ~~ THEN BEGIN 322 // from: 320.2
-  SAY @638 /* ~I've no love for Ur-Gothoz—just the power he can supply.~ [OH74867] #74867 */
+  SAY @638 /* ~I've no love for Ur-GothozÂ—just the power he can supply.~ [OH74867] #74867 */
   IF ~~ THEN REPLY @639 /* ~So long as we understand one another. Now, let us go.~ #74868 */ DO ~AddJournalEntry(91143,INFO)
 ~ EXIT
 END
@@ -3567,7 +3567,7 @@ SetGlobal("OHD_PLOT","GLOBAL",2)
 END
 
 IF ~~ THEN BEGIN 326 // from: 325.2 325.1
-  SAY @649 /* ~He demands another death—a paladin of Helm, named Terpfen.~ [OH74878] #74878 */
+  SAY @649 /* ~He demands another deathÂ—a paladin of Helm, named Terpfen.~ [OH74878] #74878 */
   IF ~~ THEN REPLY @650 /* ~Sounds straightforward enough.~ #74879 */ GOTO 327
   IF ~~ THEN REPLY @651 /* ~I guess someone named Terpfen's about to have a bad day. Then again, with a name like that, I don't imagine they've had many good days.~ #74880 */ GOTO 327
   IF ~~ THEN REPLY @652 /* ~And you're telling me this because...?~ #74881 */ GOTO 327
@@ -3605,14 +3605,14 @@ IF ~~ THEN BEGIN 331 // from: 330.0
 END
 
 IF ~~ THEN BEGIN 332 // from: 331.1
-  SAY @669 /* ~Power is the goal. But in this world, violence is the only way to attain and keep it. I embrace that reality—I revel in it. You should do the same.~ #91166 */
+  SAY @669 /* ~Power is the goal. But in this world, violence is the only way to attain and keep it. I embrace that realityÂ—I revel in it. You should do the same.~ #91166 */
   IF ~~ THEN REPLY @670 /* ~I cannot.~ #91168 */ GOTO 333
   IF ~~ THEN REPLY @671 /* ~I'm afraid I don't share your taste for the beating hearts of my enemies.~ #91170 */ GOTO 333
   IF ~~ THEN REPLY @672 /* ~Watch me carefully, Dorn. You might learn a thing or two about reveling in bloodshed.~ #91172 */ GOTO 334
 END
 
 IF ~~ THEN BEGIN 333 // from: 332.1 332.0
-  SAY @673 /* ~Then you're fortunate—and wise—to stand at my side. But let's put philosophy aside. We've business to attend to.~ #96108 */
+  SAY @673 /* ~Then you're fortunateÂ—and wiseÂ—to stand at my side. But let's put philosophy aside. We've business to attend to.~ #96108 */
   IF ~~ THEN GOTO 336
 END
 
@@ -3833,9 +3833,9 @@ IF ~~ THEN BEGIN 359 // from:
 END
 
 IF ~~ THEN BEGIN 360 // from: 359.1
-  SAY @730 /* ~We are here to get Terpfen's location. Once we have that, I'll gladly watch you slit this worm's throat—I'll even give you a blade with which to do the deed.~ [OH74991] #74991 */
+  SAY @730 /* ~We are here to get Terpfen's location. Once we have that, I'll gladly watch you slit this worm's throatÂ—I'll even give you a blade with which to do the deed.~ [OH74991] #74991 */
   IF ~~ THEN REPLY @731 /* ~I don't think worms have throats, but I get your point. Start talking, Telwyn. Where can we find Terpfen?~ #74992 */ EXTERN ~SCTELWYN~ 50
-  IF ~~ THEN REPLY @732 /* ~A pleasure delayed is a pleasure enhanced, and killing this insect will be a pleasure. —Insect! I believe you were telling us where we can find Terpfen.~ #74993 */ EXTERN ~SCTELWYN~ 65
+  IF ~~ THEN REPLY @732 /* ~A pleasure delayed is a pleasure enhanced, and killing this insect will be a pleasure. Â—Insect! I believe you were telling us where we can find Terpfen.~ #74993 */ EXTERN ~SCTELWYN~ 65
   IF ~~ THEN REPLY @733 /* ~The Abyss take Terpfen! I want this knight's blood!~ #74994 */ GOTO 361
 END
 
@@ -4073,14 +4073,14 @@ END
 IF ~~ THEN BEGIN 395 // from: 394.1
   SAY @811 /* ~Of course! There's nothing more refreshing than bathing in the blood of your enemies.~ [OH75146] #75146 */
   IF ~~ THEN REPLY @812 /* ~Terpfen wasn't your enemy. Just your target.~ #75147 */ GOTO 396
-  IF ~~ THEN REPLY @813 /* ~Terpfen was no enemy of yours—not until Ur-Gothoz got involved.~ #75148 */ GOTO 397
+  IF ~~ THEN REPLY @813 /* ~Terpfen was no enemy of yoursÂ—not until Ur-Gothoz got involved.~ #75148 */ GOTO 397
   IF ~~ THEN REPLY @814 /* ~I'm with you. There's nothing like a good massacre to brighten one's day.~ #75149 */ DO ~AddJournalEntry(91266,INFO)
 ~ EXIT
 END
 
 IF ~~ THEN BEGIN 396 // from: 395.0
   SAY @815 /* ~My target is my enemy, at least so long as he still breathes.~ [OH75150] #75150 */
-  IF ~~ THEN REPLY @816 /* ~Would that I could be blasé about serving the whims of another.~ #75151 */ GOTO 397
+  IF ~~ THEN REPLY @816 /* ~Would that I could be blasÃ© about serving the whims of another.~ #75151 */ GOTO 397
   IF ~~ THEN REPLY @817 /* ~No one's going to accuse Terpfen of doing that any time soon.~ #75152 */ DO ~AddJournalEntry(91266,INFO)
 ~ EXIT
 END
@@ -4113,7 +4113,7 @@ IF ~~ THEN BEGIN 401 // from:
   SAY @826 /* ~Hrmm. The most elite of Tyr's paladins. I see they brought some clerics with them as well. It would seem that I am quite popular with their god.~ [OH75177] #75177 */
   IF ~~ THEN REPLY @827 /* ~It's been nice knowing you, Dorn.~ #75178 */ GOTO 403
   IF ~~ THEN REPLY @828 /* ~Where's your precious Ur-Gothoz now, Dorn?~ #75179 */ GOTO 402
-  IF ~~ THEN REPLY @829 /* ~*sigh* In for a chicken, in for a henhouse. Come and get the half-orc, Traggor—if you've got the stones!~ #75180 */ EXTERN ~OHDTRAGG~ 5
+  IF ~~ THEN REPLY @829 /* ~*sigh* In for a chicken, in for a henhouse. Come and get the half-orc, TraggorÂ—if you've got the stones!~ #75180 */ EXTERN ~OHDTRAGG~ 5
 END
 
 IF ~~ THEN BEGIN 402 // from: 401.1
@@ -4188,12 +4188,12 @@ IF ~~ THEN BEGIN 412 // from:
 END
 
 IF ~~ THEN BEGIN 413 // from: 412.0
-  SAY @855 /* ~I need no strategy to still your impudent tongue—~ [OH75251] #75251 */
+  SAY @855 /* ~I need no strategy to still your impudent tongueÂ—~ [OH75251] #75251 */
   IF ~~ THEN EXTERN ~OHDAZOTH~ 3
 END
 
 IF ~~ THEN BEGIN 414 // from: 412.2
-  SAY @856 /* ~I'll have your head for that—~ [OH75253] #75253 */
+  SAY @856 /* ~I'll have your head for thatÂ—~ [OH75253] #75253 */
   IF ~~ THEN EXTERN ~OHDAZOTH~ 3
 END
 
@@ -4272,7 +4272,7 @@ IF ~~ THEN BEGIN 428 // from:
 END
 
 IF ~~ THEN BEGIN 429 // from: 427.0
-  SAY @881 /* ~Very well, Azothet. I shall begin the trek to Resurrection Gorge directly. But be warned: At the first hint of betrayal, I'll—~ [OH75310] #75310 */
+  SAY @881 /* ~Very well, Azothet. I shall begin the trek to Resurrection Gorge directly. But be warned: At the first hint of betrayal, I'llÂ—~ [OH75310] #75310 */
   IF ~~ THEN EXTERN ~OHDAZOTH~ 19
 END
 
@@ -4337,12 +4337,12 @@ END
 
 IF ~~ THEN BEGIN 441 // from:
   SAY @897 /* ~Are you mad, <CHARNAME>? Prostrate yourself on the floor and beg Ur-Gothoz for mercy, or by the gods above and all the demons below, I'll stain the ground you stand on crimson with your blood!~ [OH75383] #75383 */
-  IF ~~ THEN REPLY @898 /* ~You're the one who's slipped the bounds of sanity. Would you truly slay a friend—perhaps your only friend—at this demon's word?~ #75384 */ GOTO 445
+  IF ~~ THEN REPLY @898 /* ~You're the one who's slipped the bounds of sanity. Would you truly slay a friendÂ—perhaps your only friendÂ—at this demon's word?~ #75384 */ GOTO 445
 END
 
 IF ~~ THEN BEGIN 442 // from:
   SAY @899 /* ~I... didn't know.~ [OH75390] #75390 */
-  IF ~~ THEN REPLY @900 /* ~Allow to explain, O great Ur-Gothoz. There are few that have earned Dorn's trust, fewer still he will confide in. I am fortunate to count myself among that number. So it was to me he came with his concern that the nature of your connection had changed recently. You have seemed... distant, to him. So much so that he feared he might lose you. I thought I might assist, using certain of my skills to strengthen your bond, but I miscalculated. Instead, I temporarily cut the tie that binds you together. I am lucky indeed that you appeared—had you not, I've no doubt I'd already be writhing on the end of Dorn's sword.~ #75391 */ EXTERN ~OHDUGOTH~ 25
+  IF ~~ THEN REPLY @900 /* ~Allow to explain, O great Ur-Gothoz. There are few that have earned Dorn's trust, fewer still he will confide in. I am fortunate to count myself among that number. So it was to me he came with his concern that the nature of your connection had changed recently. You have seemed... distant, to him. So much so that he feared he might lose you. I thought I might assist, using certain of my skills to strengthen your bond, but I miscalculated. Instead, I temporarily cut the tie that binds you together. I am lucky indeed that you appearedÂ—had you not, I've no doubt I'd already be writhing on the end of Dorn's sword.~ #75391 */ EXTERN ~OHDUGOTH~ 25
 END
 
 IF ~~ THEN BEGIN 443 // from:
@@ -4356,7 +4356,7 @@ END
 
 IF ~~ THEN BEGIN 444 // from: 436.1
   SAY @905 /* ~Curse you, <CHARNAME>! I do what I must to survive and thrive, and if that means your death, so be it!~ [OH75400] #75400 */
-  IF ~~ THEN REPLY @906 /* ~So you would slay a friend—perhaps your only one—at the word of this foul glabrezu?~ #75401 */ GOTO 445
+  IF ~~ THEN REPLY @906 /* ~So you would slay a friendÂ—perhaps your only oneÂ—at the word of this foul glabrezu?~ #75401 */ GOTO 445
   IF ~~ THEN REPLY @907 /* ~I'm disappointed, Dorn. I thought better of you.~ #75402 */ GOTO 446
   IF ~~ THEN REPLY @908 /* ~You call serving this pathetic glabrezu thriving? You're even more stupid than you are ugly.~ #75403 */ GOTO 447
 END
@@ -4441,7 +4441,7 @@ END
 
 IF ~~ THEN BEGIN 453 // from:
   SAY @923 /* ~Are you mad, <CHARNAME>? Prostrate yourself on the floor and beg Ur-Gothoz for mercy, or by the gods above and all the demons below, I'll stain the ground you stand on crimson with your blood!~ [OH75429] #75429 */
-  IF ~~ THEN REPLY @898 /* ~You're the one who's slipped the bounds of sanity. Would you truly slay a friend—perhaps your only friend—at this demon's word?~ #75430 */ GOTO 454
+  IF ~~ THEN REPLY @898 /* ~You're the one who's slipped the bounds of sanity. Would you truly slay a friendÂ—perhaps your only friendÂ—at this demon's word?~ #75430 */ GOTO 454
 END
 
 IF ~~ THEN BEGIN 454 // from: 453.0
@@ -4641,12 +4641,12 @@ IF ~~ THEN BEGIN 480 // from:
 END
 
 IF ~~ THEN BEGIN 481 // from:
-  SAY @977 /* ~Some things die sooner than others—especially things that would bar my way.~ [OH75602] #75602 */
+  SAY @977 /* ~Some things die sooner than othersÂ—especially things that would bar my way.~ [OH75602] #75602 */
   IF ~~ THEN EXIT
 END
 
 IF ~~ THEN BEGIN 482 // from:
-  SAY @978 /* ~She said the monster will corrupt—~ [OH75618] #75618 */
+  SAY @978 /* ~She said the monster will corruptÂ—~ [OH75618] #75618 */
   IF ~~ THEN REPLY @979 /* ~I heard what she said, Dorn. I just hoped I heard it wrong.~ #75619 */ EXTERN ~OHDSUMM~ 42
 END
 
@@ -4688,7 +4688,7 @@ END
 
 IF ~~ THEN BEGIN 489 // from: 488.0
   SAY @996 /* ~Perhaps for you, <CHARNAME>. Not for me.~ [OH75659] #75659 */
-  IF ~~ THEN REPLY @997 /* ~Such a narrow view will cost you dearly—and may cost the world much more.~ #75660 */ GOTO 491
+  IF ~~ THEN REPLY @997 /* ~Such a narrow view will cost you dearlyÂ—and may cost the world much more.~ #75660 */ GOTO 491
   IF ~~ THEN REPLY @998 /* ~Well said, Dorn. In this venture, what you seek is the only prize that matters.~ #75661 */ GOTO 490
 END
 
@@ -4824,7 +4824,7 @@ END
 
 IF ~~ THEN BEGIN 508 // from:
   SAY @1028 /* ~Mind your tongue, <PRO_RACE>.~ [OH75804] #75804 */
-  IF ~~ THEN REPLY @1029 /* ~What? I merely suggested—~ #75805 */ GOTO 509
+  IF ~~ THEN REPLY @1029 /* ~What? I merely suggestedÂ—~ #75805 */ GOTO 509
   IF ~~ THEN REPLY @1030 /* ~Yes, sir. Minding my tongue, sir.~ #75806 */ EXTERN ~OHDYARR~ 18
   IF ~~ THEN REPLY @1031 /* ~Why, when you seem satisfied to watch it for me?~ #75807 */ GOTO 510
 END
@@ -4909,7 +4909,7 @@ END
 IF ~~ THEN BEGIN 522 // from:
   SAY @1053 /* ~You go too far, <PRO_RACE>.~ [OH75899] #75899 */
   IF ~~ THEN REPLY @1054 /* ~You make me sad, Dorn. All this time together and you still can't take a joke.~ #75900 */ GOTO 526
-  IF ~~ THEN REPLY @1055 /* ~Really? That was too far? Tell the truth now, Dorn—you've moved the line, haven't you?~ #75901 */ GOTO 528
+  IF ~~ THEN REPLY @1055 /* ~Really? That was too far? Tell the truth now, DornÂ—you've moved the line, haven't you?~ #75901 */ GOTO 528
   IF ~~ THEN REPLY @1056 /* ~I go where I would, half-orc. Only a fool would try and stop me.~ #75902 */ GOTO 523
 END
 
@@ -5058,7 +5058,7 @@ END
 IF ~~ THEN BEGIN 542 // from: 537.0
   SAY @1097 /* ~A life without power is hardly worth living.~ [OH75983] #75983 */
   IF ~~ THEN REPLY @1098 /* ~A life without love is hardly worth living.~ #75984 */ GOTO 543
-  IF ~~ THEN REPLY @1099 /* ~Yet there are hundreds of thousands—millions—of people who endure without power. And many of those are happy.~ #75985 */ GOTO 547
+  IF ~~ THEN REPLY @1099 /* ~Yet there are hundreds of thousandsÂ—millionsÂ—of people who endure without power. And many of those are happy.~ #75985 */ GOTO 547
   IF ~~ THEN REPLY @1100 /* ~"Hardly" worth living? A life without power's not worth living at all. ~ #75986 */ GOTO 559
 END
 
@@ -5075,7 +5075,7 @@ END
 
 IF ~~ THEN BEGIN 545 // from: 544.1
   SAY @1106 /* ~An alliance of equals is a different matter altogether.~ [OH75992] #75992 */
-  IF ~~ THEN REPLY @1107 /* ~Is it? A love shared between unequal partners is built on a foundation of shifting sand. An alliance of equals focused on a mutual goal—the acquisition of power, say—is the sort of ground love needs to bloom.~ #75993 */ GOTO 546
+  IF ~~ THEN REPLY @1107 /* ~Is it? A love shared between unequal partners is built on a foundation of shifting sand. An alliance of equals focused on a mutual goalÂ—the acquisition of power, sayÂ—is the sort of ground love needs to bloom.~ #75993 */ GOTO 546
 END
 
 IF ~~ THEN BEGIN 546 // from: 545.0
@@ -5110,7 +5110,7 @@ END
 IF ~~ THEN BEGIN 551 // from: 550.1
   SAY @1122 /* ~Curse your eyes, <CHARNAME>! You see my quandary but offer me no solutions.~ [OH76009] #76009 */
   IF ~~ THEN REPLY @1123 /* ~I have nothing to offer but my support. I have faith in you, Dorn. You'll find a way through this.~ #76010 */ GOTO 552
-  IF ~~ THEN REPLY @1124 /* ~A time will come—soon, I think—when you'll need to choose between freedom and power. When that time comes, I pray you make the right decision.~ #76011 */ GOTO 553
+  IF ~~ THEN REPLY @1124 /* ~A time will comeÂ—soon, I thinkÂ—when you'll need to choose between freedom and power. When that time comes, I pray you make the right decision.~ #76011 */ GOTO 553
   IF ~~ THEN REPLY @1125 /* ~Find your own solutions, Il-Khan. I've better things to do with my time than dwell on your problems.~ #76012 */ GOTO 555
 END
 
@@ -5219,7 +5219,7 @@ END
 
 IF ~~ THEN BEGIN 571 // from: 570.1
   SAY @1163 /* ~Make another remark of that nature and you'll also understand the sorry state of your breathing.~ [OH76079] #76079 */
-  IF ~~ THEN REPLY @1164 /* ~There's nothing wrong with my breathing—wait, I just got it. Never mind. Yarrow, continue.~ #76080 */ EXTERN ~OHDYARR~ 71
+  IF ~~ THEN REPLY @1164 /* ~There's nothing wrong with my breathingÂ—wait, I just got it. Never mind. Yarrow, continue.~ #76080 */ EXTERN ~OHDYARR~ 71
   IF ~~ THEN REPLY @1165 /* ~You would threaten me, half-orc?~ #76081 */ GOTO 572
 END
 
@@ -5292,7 +5292,7 @@ ActionOverride("ohdyarr",Enemy())
 END
 
 IF ~~ THEN BEGIN 582 // from:
-  SAY @1181 /* ~Speak for yourself, <CHARNAME>. I intend to walk out of the gorge alive—and with greater power than any I've wielded before.~ [OH76134] #76134 */
+  SAY @1181 /* ~Speak for yourself, <CHARNAME>. I intend to walk out of the gorge aliveÂ—and with greater power than any I've wielded before.~ [OH76134] #76134 */
   IF ~~ THEN REPLY @1182 /* ~An intention is the most common victim of reality, but I'm with you. We can prevail in our quest if we work together.~ #76135 */ EXTERN ~OHDYARR~ 87
   IF ~~ THEN REPLY @1183 /* ~The best laid plans of gods and men often go awry. And frankly, our plan wasn't that well laid to begin with.~ #76136 */ GOTO 583
   IF ~~ THEN REPLY @1184 /* ~And I shall walk beside you. Yarrow, what is the way into the gorge?~ #76137 */ EXTERN ~OHDYARR~ 89
@@ -5451,7 +5451,7 @@ CheckStatGT(Player1,13,CHR)
 END
 
 IF ~~ THEN BEGIN 601 // from: 600.2
-  SAY @1240 /* ~We'll get nowhere quarreling amongst ourselves. We must explore the gorge—find the missing stones.~ [OH76207] #76207 */
+  SAY @1240 /* ~We'll get nowhere quarreling amongst ourselves. We must explore the gorgeÂ—find the missing stones.~ [OH76207] #76207 */
   IF ~~ THEN REPLY @1241 /* ~Agreed. It's not like leaving's an option at this point.~ #76208 */ EXIT
 END
 
@@ -5600,13 +5600,13 @@ END
 
 IF ~~ THEN BEGIN 622 // from:
   SAY @1285 /* ~You came here willingly, <CHARNAME>. No one put a sword to your throat.~ [OH76278] #76278 */
-  IF ~~ THEN REPLY @1286 /* ~I came here willingly, and I'll leave the same way—the sooner, the better. Now, druid, where can we find the circle's stones?~ #76279 */ EXTERN ~OHDVERN~ 11
+  IF ~~ THEN REPLY @1286 /* ~I came here willingly, and I'll leave the same wayÂ—the sooner, the better. Now, druid, where can we find the circle's stones?~ #76279 */ EXTERN ~OHDVERN~ 11
   IF ~~ THEN REPLY @1287 /* ~I sort of wish someone had. Then I'd have an excuse.~ #76280 */ GOTO 619
   IF ~~ THEN REPLY @1288 /* ~I came here seeking power and fortune. Thus far, I've been disappointed.~ #76281 */ GOTO 623
 END
 
 IF ~~ THEN BEGIN 623 // from: 622.2
-  SAY @1289 /* ~I share your disappointment, but trust our current circumstances are but a fleeting setback. Now, druid—where are the summoning stones?~ [OH76284] #76284 */
+  SAY @1289 /* ~I share your disappointment, but trust our current circumstances are but a fleeting setback. Now, druidÂ—where are the summoning stones?~ [OH76284] #76284 */
   IF ~~ THEN EXTERN ~OHDVERN~ 11
 END
 
@@ -5621,7 +5621,7 @@ IF ~~ THEN BEGIN 625 // from: 624.0
 END
 
 IF ~~ THEN BEGIN 626 // from:
-  SAY @1294 /* ~The Abyss take you both! Enough stories—tell us where we can find the stones!~ [OH76311] #76311 */
+  SAY @1294 /* ~The Abyss take you both! Enough storiesÂ—tell us where we can find the stones!~ [OH76311] #76311 */
   IF ~~ THEN EXTERN ~OHDVERN~ 23
 END
 
@@ -5817,7 +5817,7 @@ END
 
 IF ~~ THEN BEGIN 652 // from: 651.0 650.0
   SAY @1347 /* ~You're madder than she is if you think she'll willingly help us.~ [OH76579] #76579 */
-  IF ~~ THEN REPLY @1348 /* ~I seek only to prevent unnecessary bloodshed—either hers or ours.~ #76580 */ GOTO 654
+  IF ~~ THEN REPLY @1348 /* ~I seek only to prevent unnecessary bloodshedÂ—either hers or ours.~ #76580 */ GOTO 654
   IF ~~ THEN REPLY @1349 /* ~I am here in the shadows of Resurrection Gorge, so there's certainly an argument to be made that that's the case.~ #76581 */ GOTO 653
   IF ~  OR(2)
 CheckStatLT(Player1,14,STR)
@@ -5888,7 +5888,7 @@ ActionOverride("DORN",Enemy())
 END
 
 IF ~~ THEN BEGIN 662 // from:
-  SAY @1364 /* ~The stream can have my toes—I'll have your head!~ [OH76618] #76618 */
+  SAY @1364 /* ~The stream can have my toesÂ—I'll have your head!~ [OH76618] #76618 */
   IF ~~ THEN DO ~SetGlobal("OHD_WINTERB_HOSTILE","OH5200",1)
 Attack("ohdwntrb")
 ActionOverride("ohdwntrb",Enemy())
@@ -5987,7 +5987,7 @@ CheckStatGT(Player1,12,CHR)
 END
 
 IF ~~ THEN BEGIN 673 // from: 671.2
-  SAY @1388 /* ~Hah! That's who I was looking for—someone worthy to share my victories.~ [OH76836] #76836 */
+  SAY @1388 /* ~Hah! That's who I was looking forÂ—someone worthy to share my victories.~ [OH76836] #76836 */
   IF ~~ THEN REPLY @1389 /* ~Your greatest victory is yet to come, Dorn. Dragon, tell us what you know of the stones.~ #76837 */ EXTERN ~OHDTMFIL~ 52
 END
 
@@ -6184,7 +6184,7 @@ IF ~~ THEN BEGIN 702 // from:
 END
 
 IF ~~ THEN BEGIN 703 // from:
-  SAY @1444 /* ~The tanar'ri tells it true. A demon's oath, once made, cannot be broken—not by the demon, at any rate.~ [OH77072] #77072 */
+  SAY @1444 /* ~The tanar'ri tells it true. A demon's oath, once made, cannot be brokenÂ—not by the demon, at any rate.~ [OH77072] #77072 */
   IF ~~ THEN REPLY @1445 /* ~And you'll swear an oath? You'll give us the sword and all the summoning stones you possess?~ #77073 */ EXTERN ~OHDXACH~ 12
 END
 
@@ -6333,9 +6333,9 @@ IF ~~ THEN BEGIN 726 // from: 725.0
 END
 
 IF ~~ THEN BEGIN 727 // from: 726.0
-  SAY @1487 /* ~A sapient life, not an innocent one—though it makes no difference to me either way. Nothing must stand between me and my goal.~ [OH77230] #77230 */
+  SAY @1487 /* ~A sapient life, not an innocent oneÂ—though it makes no difference to me either way. Nothing must stand between me and my goal.~ [OH77230] #77230 */
   IF ~~ THEN REPLY @1488 /* ~Not even me?~ #77231 */ GOTO 728
-  IF ~~ THEN REPLY @1489 /* ~You have a way with words, Dorn—hammers have a similar way with anvils.~ #77232 */ GOTO 737
+  IF ~~ THEN REPLY @1489 /* ~You have a way with words, DornÂ—hammers have a similar way with anvils.~ #77232 */ GOTO 737
   IF ~~ THEN REPLY @1490 /* ~And nothing shall.~ #77233 */ GOTO 739
 END
 
@@ -6877,7 +6877,7 @@ Global("OHD_ritual_urgothoz","OH5120",1)
 END
 
 IF ~~ THEN BEGIN 763 // from: 762.2 762.1 762.0
-  SAY @1572 /* ~Yes, but it's not just the blade—something is amiss. My patron has been neutered, but my blackguard powers remain...~ [OH77330] #77330 */
+  SAY @1572 /* ~Yes, but it's not just the bladeÂ—something is amiss. My patron has been neutered, but my blackguard powers remain...~ [OH77330] #77330 */
   IF ~~ THEN REPLY @1221 /* ~How is that possible?~ #77331 */ DO ~SetGlobal("OHD_ritual","OH5120",10)
 StartCutSceneMode()
 StartCutScene("ohdcut9c")
@@ -6980,7 +6980,7 @@ IF ~~ THEN BEGIN 776 // from:
 END
 
 IF ~~ THEN BEGIN 777 // from: 776.0
-  SAY @1601 /* ~It is time, <CHARNAME>—past time, in fact—that we rid ourselves of these sycophants that cling to you like so many leeches.~ [OH77387] #77387 */
+  SAY @1601 /* ~It is time, <CHARNAME>Â—past time, in factÂ—that we rid ourselves of these sycophants that cling to you like so many leeches.~ [OH77387] #77387 */
   IF ~~ THEN REPLY @1602 /* ~You call my friends leeches?~ #77388 */ GOTO 780
   IF ~~ THEN REPLY @1603 /* ~Well, this conversation's certainly taken an unpleasant turn.~ #77389 */ GOTO 782
   IF ~~ THEN REPLY @1604 /* ~They have their uses to me.~ #77390 */ GOTO 778
@@ -7005,7 +7005,7 @@ IF ~~ THEN BEGIN 780 // from: 777.0
 END
 
 IF ~~ THEN BEGIN 781 // from: 778.1
-  SAY @1613 /* ~Well—I suppose one would suffice.~ [OH77401] #77401 */
+  SAY @1613 /* ~WellÂ—I suppose one would suffice.~ [OH77401] #77401 */
   IF ~~ THEN REPLY @1614 /* ~You've gained a sword and lost your mind, Dorn.~ #77402 */ GOTO 738
   IF ~~ THEN REPLY @1615 /* ~That's better. Much more reasonable.~ #77403 */ GOTO 779
   IF ~~ THEN REPLY @1616 /* ~You think I'd kill one of them for you? You overestimate your value to me, half-orc.~ #77404 */ GOTO 732
@@ -7099,7 +7099,7 @@ IF ~~ THEN BEGIN 793 // from:
 END
 
 IF ~~ THEN BEGIN 794 // from: 793.0
-  SAY @1630 /* ~It is time, <CHARNAME>—past time, in fact—that we rid ourselves of these sycophants that cling to you like so many leeches.~ [OH77453] #77453 */
+  SAY @1630 /* ~It is time, <CHARNAME>Â—past time, in factÂ—that we rid ourselves of these sycophants that cling to you like so many leeches.~ [OH77453] #77453 */
   IF ~~ THEN REPLY @1602 /* ~You call my friends leeches?~ #77454 */ GOTO 797
   IF ~~ THEN REPLY @1631 /* ~You're drunk on power, Dorn. Get some sleep and we can discuss this in the morning when your head is clear.~ #77455 */ GOTO 802
   IF ~~ THEN REPLY @1604 /* ~They have their uses to me.~ #77456 */ GOTO 795
@@ -7125,7 +7125,7 @@ IF ~~ THEN BEGIN 797 // from: 794.0
 END
 
 IF ~~ THEN BEGIN 798 // from: 797.1 795.1
-  SAY @1637 /* ~Well—I suppose one would suffice.~ [OH77466] #77466 */
+  SAY @1637 /* ~WellÂ—I suppose one would suffice.~ [OH77466] #77466 */
   IF ~~ THEN REPLY @1614 /* ~You've gained a sword and lost your mind, Dorn.~ #77467 */ GOTO 738
   IF ~~ THEN REPLY @1615 /* ~That's better. Much more reasonable.~ #77468 */ GOTO 796
   IF ~~ THEN REPLY @1616 /* ~You think I'd kill one of them for you? You overestimate your value to me, half-orc.~ #77469 */ GOTO 732
@@ -7213,7 +7213,7 @@ IF ~~ THEN BEGIN 810 // from: 796.1
 END
 
 IF ~~ THEN BEGIN 811 // from:
-  SAY @1649 /* ~I knew you were the one, <CHARNAME>—I knew it from the first moment I laid eyes upon you. Together we are as gods... The Abyss will tremble and the heavens fall before us!~ [OH77491] #77491 */
+  SAY @1649 /* ~I knew you were the one, <CHARNAME>Â—I knew it from the first moment I laid eyes upon you. Together we are as gods... The Abyss will tremble and the heavens fall before us!~ [OH77491] #77491 */
   IF ~~ THEN REPLY @1650 /* ~Shut up and kiss me, Dorn.~ #77492 */ EXIT
   IF ~~ THEN REPLY @1651 /* ~Is that it? And here I thought we'd be doing something impressive.~ #77493 */ EXIT
   IF ~~ THEN REPLY @1652 /* ~May the gods help those who stand against us. Nothing else will save them.~ #77494 */ EXIT
@@ -7321,7 +7321,7 @@ IF ~~ THEN BEGIN 827 // from:
 END
 
 IF ~~ THEN BEGIN 828 // from:
-  SAY @1677 /* ~Indeed. Vengeance is a worthy goal—let it focus your thoughts, sharpen them to a point you may then plunge into the hearts of your foes.~ #93670 */
+  SAY @1677 /* ~Indeed. Vengeance is a worthy goalÂ—let it focus your thoughts, sharpen them to a point you may then plunge into the hearts of your foes.~ #93670 */
   IF ~~ THEN EXIT
   IF ~  IfValidForPartyDialogue("VALYGAR")
 ~ THEN EXTERN ~VALYGARJ~ 132
@@ -8224,13 +8224,13 @@ IF WEIGHT #52 /* Triggers after states #: 843 844 845 even though they appear af
   SAY @1695 /* ~<CHARNAME>... I would have words with you.~ #96689 */
   IF ~~ THEN REPLY @1696 /* ~Will this end in another tantrum?~ #96695 */ DO ~IncrementGlobal("DornLovetalks","GLOBAL",1)
 RealSetGlobalTimer("DornLovetalksTimer","GLOBAL",5400)
-~ GOTO 851
+SetGlobal("OHD_terpfendlg","GLOBAL",4) ~ GOTO 851
   IF ~~ THEN REPLY @1697 /* ~Of course. After all, you've shown excellent self-control.~ #96696 */ DO ~IncrementGlobal("DornLovetalks","GLOBAL",1)
 RealSetGlobalTimer("DornLovetalksTimer","GLOBAL",5400)
-~ GOTO 851
+SetGlobal("OHD_terpfendlg","GLOBAL",4) ~ GOTO 851
   IF ~~ THEN REPLY @1698 /* ~What's this? An assasination attempt after a failed public brawl?~ #96697 */ DO ~IncrementGlobal("DornLovetalks","GLOBAL",1)
 RealSetGlobalTimer("DornLovetalksTimer","GLOBAL",5400)
-~ GOTO 851
+SetGlobal("OHD_terpfendlg","GLOBAL",4) ~ GOTO 851
 END
 
 IF ~~ THEN BEGIN 851 // from: 180.2 180.1 180.0

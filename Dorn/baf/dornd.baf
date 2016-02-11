@@ -1,0 +1,66 @@
+IF
+  !Dead("ohdxach")  // ~Xachrimos~
+  Global("OHD_xach_ambush","GLOBAL",1)
+THEN
+  RESPONSE #100
+    CreateCreatureObject("ohdxach2",Player1,0,0,0)  // ~Xachrimos~
+    SetGlobal("OHD_xach_ambush","GLOBAL",2)
+END
+
+IF
+  OR(2)
+  Global("DornRomanceActive","GLOBAL",1)
+  Global("DornRomanceActive","GLOBAL",2)
+  IfValidForPartyDialogue(Player1)
+  IfValidForPartyDialogue(Myself)
+  CombatCounter(0)
+  !See([ENEMY])
+  !AreaType(DUNGEON)
+  !Global("chapter","GLOBAL",5)
+  Global("DornLovetalks","GLOBAL",7)
+  RealGlobalTimerExpired("DornLovetalksTimer","GLOBAL")
+THEN
+  RESPONSE #100
+    PlaySong(87)
+    IncrementGlobal("DornLovetalks","GLOBAL",1)
+    Dialog(Player1)
+END
+
+IF
+  OR(2)
+  Global("DornRomanceActive","GLOBAL",1)
+  Global("DornRomanceActive","GLOBAL",2)
+  IfValidForPartyDialogue(Player1)
+  IfValidForPartyDialogue(Myself)
+  CombatCounter(0)
+  !See([ENEMY])
+  !AreaType(DUNGEON)
+  !Global("chapter","GLOBAL",5)
+  Global("DornLovetalks","GLOBAL",17)
+  RealGlobalTimerExpired("DornLovetalksTimer","GLOBAL")
+  Global("OHD_END_REWARD","GLOBAL",1)
+THEN
+  RESPONSE #100
+    PlaySong(87)
+    IncrementGlobal("DornLovetalks","GLOBAL",1)
+    Dialog(Player1)
+END
+
+IF
+  OR(2)
+  Global("DornRomanceActive","GLOBAL",1)
+  Global("DornRomanceActive","GLOBAL",2)
+  IfValidForPartyDialogue(Player1)
+  IfValidForPartyDialogue(Myself)
+  CombatCounter(0)
+  !See([ENEMY])
+  !AreaType(DUNGEON)
+  !Global("chapter","GLOBAL",5)
+  Global("DornLovetalks","GLOBAL",41)
+  RealGlobalTimerExpired("DornLovetalksTimer","GLOBAL")
+THEN
+  RESPONSE #100
+    PlaySong(87)
+    IncrementGlobal("DornLovetalks","GLOBAL",1)
+    Dialog(Player1)
+END

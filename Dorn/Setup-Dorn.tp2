@@ -1,0 +1,31 @@
+BACKUP ~Dorn/Backup~
+
+AUTHOR ~trinit~ 
+
+VERSION ~v1~ 
+
+AUTO_TRA ~Dorn/%s~
+
+LANGUAGE ~English~ ~English~ ~Dorn/English/Setup-Dorn.tra~
+
+
+// Dorn, by trinit
+BEGIN @0
+
+APPEND ~STATE.IDS~ ~0x80101FEF CD_STATE_NOTVALID~
+UNLESS ~CD_STATE_NOTVALID~
+
+
+
+
+ // Dialogue
+
+COMPILE ~Dorn/dialogue/DORN.d~
+COMPILE ~Dorn/dialogue/DORN25J.d~
+COMPILE ~Dorn/dialogue/DORNJ.d~
+
+
+ // Scripts
+EXTEND_TOP ~Dorn.bcs~ ~Dorn/baf/Dorn.baf~
+EXTEND_TOP ~Dorn25.bcs~ ~Dorn/baf/Dorn25.baf~
+EXTEND_TOP ~Dornd.bcs~ ~Dorn/baf/Dornd.baf~

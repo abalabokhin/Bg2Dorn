@@ -1,0 +1,560 @@
+IF
+  Global("OHD_DornSummoned","GLOBAL",1)
+THEN
+  RESPONSE #100
+    StartDialogNoSet([PC])
+END
+
+IF
+  AreaCheck("OH5500")
+  Global("OHD_dorninitial","OH5500",0)
+THEN
+  RESPONSE #100
+    SetGlobal("OHD_dorninitial","OH5500",1)
+    Continue()
+END
+
+IF
+  Global("OHD_dorninitial","OH5500",1)
+  Global("OHD_urgothoz_sword","GLOBAL",1)
+THEN
+  RESPONSE #100
+    CreateCreatureObject("OHDSWUR",Player1,0,0,0)  // ~Ur-Gothoz~
+    SetGlobal("OHD_dorninitial","OH5500",2)
+    Continue()
+END
+
+IF
+  Global("OHD_dorninitial","OH5500",1)
+  Global("OHD_azothet_sword","GLOBAL",1)
+THEN
+  RESPONSE #100
+    CreateCreatureObject("OHDSWAZ",Player1,0,0,0)  // ~Azothet~
+    SetGlobal("OHD_dorninitial","OH5500",2)
+    Continue()
+END
+
+IF
+  Global("OHD_dorninitial","OH5500",2)
+  IfValidForPartyDialogue("hexxat")  // hexxat
+THEN
+  RESPONSE #100
+    ActionOverride("hexxat",StartDialogNoSet(Player1))
+END
+
+IF
+  Global("OHD_dorninitial","OH5500",2)
+  !IfValidForPartyDialogue("hexxat")  // hexxat
+THEN
+  RESPONSE #100
+    ActionOverride("ohdsword",StartDialogNoSet(Player1))
+END
+
+IF
+  Global("OHD_dorninitial","OH5500",3)
+THEN
+  RESPONSE #100
+    SetGlobal("OHD_dorninitial","OH5500",4)
+    ActionOverride("ohdsword",DestroySelf())
+END
+
+IF
+  Global("OHD_gateearly","OH5500",1)
+  InParty(Myself)
+THEN
+  RESPONSE #100
+    Wait(1)
+    StartDialogNoSet(Player1)
+END
+
+IF
+  Global("OHD_bollard","OH5500",0)
+  See("ohdboll")  // ~Bollard Firejaw~
+  IfValidForPartyDialogue(Myself)
+THEN
+  RESPONSE #100
+    SetGlobal("OHD_bollard","OH5500",1)
+END
+
+IF
+  Global("OHD_bollard","OH5500",1)
+  IfValidForPartyDialogue(Myself)
+THEN
+  RESPONSE #100
+    Dialog(Player1)
+END
+
+IF
+  Global("OHD_playerkillstree","OH5500",3)
+THEN
+  RESPONSE #100
+    StartDialogNoSet(Player1)
+END
+
+IF
+  Global("OHD_playerkillstree","OH5500",4)
+THEN
+  RESPONSE #100
+    DisplayStringHead(Myself,90135)  // ~Before you can act, Dorn steps forward with the divine blade in his grasp.~
+    SetGlobal("OHD_playerkillstree","OH5500",5)
+    Wait(2)
+    StartCutSceneMode()
+    StartCutScene("OHDPTREE")
+END
+
+IF
+  OR(2)
+  Global("OHD_treereminder","OH5500",1)
+  Global("OHD_treereminder","OH5500",3)
+  Global("OHD_treereminder","OH5500",5)
+  GlobalTimerExpired("OHD_treereminder_timer","OH5500")
+  IfValidForPartyDialogue(Myself)
+  AreaCheck("OH5500")
+THEN
+  RESPONSE #100
+    IncrementGlobal("OHD_treereminder","OH5500",1)
+END
+
+IF
+  OR(2)
+  Global("OHD_treereminder","OH5500",1)
+  Global("OHD_treereminder","OH5500",3)
+  Global("OHD_treereminder","OH5500",5)
+  IfValidForPartyDialogue(Myself)
+  AreaCheck("OH5500")
+THEN
+  RESPONSE #100
+    Dialog(Player1)
+END
+
+IF
+  Global("OHD_gromnir_talk","GLOBAL",1)
+  Dead("gromnir")  // ~Gromnir Il-Khan~
+  IfValidForPartyDialogue(Myself)
+THEN
+  RESPONSE #100
+    SetGlobal("OHD_gromnir_talk","GLOBAL",2)
+    SetGlobalTimer("OHD_gromnir_timer","GLOBAL",1)
+END
+
+IF
+  Global("OHD_gromnir_talk","GLOBAL",2)
+  GlobalTimerExpired("OHD_gromnir_timer","GLOBAL")
+  IfValidForPartyDialogue(Myself)
+THEN
+  RESPONSE #100
+    SetGlobal("OHD_gromnir_talk","GLOBAL",3)
+END
+
+IF
+  Global("OHD_gromnir_talk","GLOBAL",3)
+  IfValidForPartyDialogue(Myself)
+  CombatCounter(0)
+  !See([ENEMY])
+THEN
+  RESPONSE #100
+    Dialog(Player1)
+END
+
+IF
+  Global("OHD_inscribed_urgothoz","GLOBAL",1)
+  InParty(Myself)
+  !Dead("dorn")  // dorn
+THEN
+  RESPONSE #100
+    SetGlobal("OHD_inscribed_urgothoz","GLOBAL",2)
+    SetGlobalTimer("OHD_inscribed_urgothoz_timer","GLOBAL",FOURTEEN_DAYS)
+END
+
+IF
+  Global("OHD_inscribed_urgothoz","GLOBAL",2)
+  CombatCounter(0)
+  GlobalTimerExpired("OHD_inscribed_urgothoz_timer","GLOBAL")
+  IfValidForPartyDialogue(Myself)
+THEN
+  RESPONSE #100
+    SetGlobal("OHD_inscribed_urgothoz","GLOBAL",3)
+    Continue()
+END
+
+IF
+  Global("OHD_inscribed_urgothoz","GLOBAL",3)
+  IfValidForPartyDialogue(Myself)
+  Global("OHD_azothet_sword","GLOBAL",1)
+THEN
+  RESPONSE #100
+    CreateCreatureObject("OHDSWAZ","dorn",0,0,0)  // ~Azothet~
+    Dialog(Player1)
+END
+
+IF
+  Global("OHD_inscribed_urgothoz","GLOBAL",3)
+  IfValidForPartyDialogue(Myself)
+  !Global("OHD_azothet_sword","GLOBAL",1)
+THEN
+  RESPONSE #100
+    Dialog(Player1)
+END
+
+IF
+  Global("OHD_inscribed_azothet","GLOBAL",1)
+  InParty(Myself)
+  !Dead("dorn")  // dorn
+THEN
+  RESPONSE #100
+    SetGlobal("OHD_inscribed_azothet","GLOBAL",2)
+    SetGlobalTimer("OHD_inscribed_azothet_timer","GLOBAL",FOURTEEN_DAYS)
+END
+
+IF
+  Global("OHD_inscribed_azothet","GLOBAL",2)
+  CombatCounter(0)
+  GlobalTimerExpired("OHD_inscribed_azothet_timer","GLOBAL")
+  IfValidForPartyDialogue(Myself)
+THEN
+  RESPONSE #100
+    SetGlobal("OHD_inscribed_azothet","GLOBAL",3)
+    Continue()
+END
+
+IF
+  Global("OHD_inscribed_azothet","GLOBAL",3)
+  IfValidForPartyDialogue(Myself)
+  Global("OHD_urgothoz_sword","GLOBAL",1)
+THEN
+  RESPONSE #100
+    CreateCreatureObject("OHDSWUR","dorn",0,0,0)  // ~Ur-Gothoz~
+    Dialog(Player1)
+END
+
+IF
+  Global("OHD_inscribed_azothet","GLOBAL",3)
+  IfValidForPartyDialogue(Myself)
+  !Global("OHD_urgothoz_sword","GLOBAL",1)
+THEN
+  RESPONSE #100
+    Dialog(Player1)
+END
+
+IF
+  Exists("OHDSWORD")  // OHDSWORD
+  OR(2)
+  Global("OHD_inscribed_azothet","GLOBAL",4)
+  Global("OHD_inscribed_urgothoz","GLOBAL",4)
+THEN
+  RESPONSE #100
+    ActionOverride("OHDSWUR",DestroySelf())
+END
+
+IF
+  Global("OHD_inscribed_dorn","GLOBAL",1)
+  InParty(Myself)
+  !Dead("dorn")  // dorn
+THEN
+  RESPONSE #100
+    SetGlobal("OHD_inscribed_dorn","GLOBAL",2)
+    SetGlobalTimer("OHD_inscribed_dorn_timer","GLOBAL",FOURTEEN_DAYS)
+END
+
+IF
+  Global("OHD_inscribed_dorn","GLOBAL",2)
+  CombatCounter(0)
+  GlobalTimerExpired("OHD_inscribed_dorn_timer","GLOBAL")
+  IfValidForPartyDialogue(Myself)
+THEN
+  RESPONSE #100
+    SetGlobal("OHD_inscribed_dorn","GLOBAL",3)
+    ClearAllActions()
+    StartCutSceneMode()
+    StartCutScene("ohddorn1")
+END
+
+IF
+  Global("OHD_inscribed_dorn","GLOBAL",4)
+  InParty(Myself)
+THEN
+  RESPONSE #100
+    LeaveParty()
+    Enemy()
+    Attack("OHDPLANB")
+END
+
+IF
+  InParty(Myself)
+  OR(2)
+  Global("OHD_CRUSADERS","GLOBAL",0)
+  Global("OHD_CRUSADERS","GLOBAL",4)
+THEN
+  RESPONSE #100
+    SetGlobal("OHD_CRUSADERS","GLOBAL",1)
+    SetGlobalTimer("OHD_CRUSADER_TIMER","LOCALS",SEVEN_DAYS)
+END
+
+IF
+  InParty(Myself)
+  Global("OHD_CRUSADERS","GLOBAL",2)
+  OR(2)
+  GlobalTimerExpired("OHD_crusaders_failsafe_timer","GLOBAL")
+  OnCreation()
+THEN
+  RESPONSE #100
+    ForceRandomEncounter("oh5400")
+    SetGlobalTimer("OHD_crusaders_failsafe_timer","GLOBAL",60)
+END
+
+IF
+  InParty(Myself)
+  Global("OHD_CRUSADERS","GLOBAL",1)
+  GlobalTimerExpired("OHD_CRUSADER_TIMER","LOCALS")
+THEN
+  RESPONSE #100
+    ForceRandomEncounter("oh5400")
+    SetGlobal("OHD_CRUSADERS","GLOBAL",2)
+    SetGlobalTimer("OHD_crusaders_failsafe_timer","GLOBAL",60)
+END
+
+IF
+  Global("OHD_CRUSADERS","GLOBAL",3)
+  !AreaCheck("oh5400")
+  !AreaCheck("oh5500")
+THEN
+  RESPONSE #100
+    SetGlobal("SPRITE_IS_DEADOHDCRU01","GLOBAL",0)
+    SetGlobal("SPRITE_IS_DEADOHDCRU02","GLOBAL",0)
+    SetGlobal("SPRITE_IS_DEADOHDCRU03","GLOBAL",0)
+    SetGlobal("SPRITE_IS_DEADOHDCRU04","GLOBAL",0)
+    SetGlobal("OHD_CRUSADERS","GLOBAL",4)
+END
+
+IF
+  OR(2)
+  Global("OHD_CRUSADERS","GLOBAL",3)
+  Global("OHD_CRUSADERS","GLOBAL",4)
+  AreaCheck("oh5500")
+THEN
+  RESPONSE #100
+    SetGlobal("OHD_CRUSADERS","GLOBAL",99)
+END
+
+IF
+  Global("OH_RANDOM_ENCOUNTER","GLOBAL",1)
+  Global("OHD_CRUSADERS","GLOBAL",2)
+  !InParty(Myself)
+THEN
+  RESPONSE #100
+    ForceRandomEncounter("")
+    SetGlobal("OH_RANDOM_ENCOUNTER","GLOBAL",0)
+    SetGlobal("OHD_CRUSADERS","GLOBAL",1)
+END
+
+IF
+  Global("OHD_planetar","OH5400",1)
+THEN
+  RESPONSE #100
+    StartDialogNoSet(Player1)
+END
+
+IF
+  !HasItemEquipedReal("sw2hd1",Myself)
+  !Global("ohdornsw","LOCALS",0)
+THEN
+  RESPONSE #100
+    ApplySpellRES("ohdsw0",Myself)  // <Invalid Strref -1>
+    SetGlobal("ohdornsw","LOCALS",0)
+END
+
+IF
+  AreaCheck("OH4220")
+  Global("OHR_FINALE","GLOBAL",24)
+  !IfValidForPartyDialogue("NEERA")  // NEERA
+  IfValidForPartyDialogue(Myself)
+  Range(Player1,30)
+THEN
+  RESPONSE #100
+    SetInterrupt(FALSE)
+    Wait(5)
+    StartDialogNoSet(Player1)
+    SetInterrupt(TRUE)
+END
+
+IF
+  Global("DornRomanceActive","GLOBAL",2)
+  Global("DornToBLovetalks","GLOBAL",0)
+THEN
+  RESPONSE #100
+    SetGlobal("DornToBLovetalks","GLOBAL",1)
+    RealSetGlobalTimer("DornToBLovetalksTimer","GLOBAL",5400)
+END
+
+IF
+  Global("DornRomanceActive","GLOBAL",2)
+  IfValidForPartyDialogue(Player1)
+  IfValidForPartyDialogue(Myself)
+  CombatCounter(0)
+  !See([ENEMY])
+  !AreaType(DUNGEON)
+  OR(2)
+  Global("DornToBLovetalks","GLOBAL",2)
+  Global("DornToBLovetalks","GLOBAL",4)
+THEN
+  RESPONSE #100
+    PlaySong(87)
+    Dialog(Player1)
+END
+
+IF
+  Global("DornRomanceActive","GLOBAL",2)
+  IfValidForPartyDialogue(Player1)
+  IfValidForPartyDialogue(Myself)
+  CombatCounter(0)
+  !See([ENEMY])
+  !AreaType(DUNGEON)
+  RealGlobalTimerExpired("DornToBLovetalksTimer","GLOBAL")
+  Global("DornToBLovetalks","GLOBAL",1)
+THEN
+  RESPONSE #100
+    IncrementGlobal("DornToBLovetalks","GLOBAL",1)
+END
+
+IF
+  Global("SaradushSacked","GLOBAL",1)
+  Global("DornRomanceActive","GLOBAL",2)
+  Global("OHD_saradushtalk","GLOBAL",0)
+  IfValidForPartyDialogue(Myself)
+  IfValidForPartyDialogue(Player1)
+  CombatCounter(0)
+  !See([ENEMY])
+  !AreaType(DUNGEON)
+  PartyRested()
+THEN
+  RESPONSE #100
+    PlaySong(87)
+    SetGlobal("OHD_saradushtalk","GLOBAL",1)
+END
+
+IF
+  Global("DornRomanceActive","GLOBAL",2)
+  IfValidForPartyDialogue(Player1)
+  IfValidForPartyDialogue(Myself)
+  CombatCounter(0)
+  !See([ENEMY])
+  !AreaType(DUNGEON)
+  Global("OHD_saradushtalk","GLOBAL",1)
+THEN
+  RESPONSE #100
+    Dialog(Player1)
+END
+
+IF
+  Global("DornRomanceActive","GLOBAL",2)
+  IfValidForPartyDialogue(Player1)
+  IfValidForPartyDialogue(Myself)
+  CombatCounter(0)
+  !See([ENEMY])
+  AreaCheck("AR4500")
+  Global("ChallengesDone","GLOBAL",1)
+  See("LeavePocketPlane")  // LeavePocketPlane
+  Global("DornToBLovetalks","GLOBAL",3)
+THEN
+  RESPONSE #100
+    IncrementGlobal("DornToBLovetalks","GLOBAL",1)
+END
+
+IF
+  RealGlobalTimerExpired("OHD_rejected_timer","GLOBAL")
+  Global("OHD_romancerejected","GLOBAL",1)
+  IfValidForPartyDialogue(Player1)
+  IfValidForPartyDialogue(Myself)
+  CombatCounter(0)
+  !See([ENEMY])
+  !AreaType(DUNGEON)
+THEN
+  RESPONSE #100
+    IncrementGlobal("OHD_romancerejected","GLOBAL",1)
+END
+
+IF
+  Global("OHD_romancerejected","GLOBAL",2)
+  IfValidForPartyDialogue(Player1)
+  IfValidForPartyDialogue(Myself)
+  CombatCounter(0)
+  !See([ENEMY])
+  !AreaType(DUNGEON)
+THEN
+  RESPONSE #100
+    Dialog(Player1)
+END
+
+IF
+  Delay(2)
+  Global("OHH_hexxatdeadcomments","GLOBAL",1)
+  IfValidForPartyDialogue("dorn")  // dorn
+  !IfValidForPartyDialogue("neera")  // neera
+  !IfValidForPartyDialogue("rasaad")  // rasaad
+  !AreaCheck("OH7310")
+  !AreaCheck("OH7300")
+  CombatCounter(0)
+THEN
+  RESPONSE #100
+    Dialog(Player1)
+END
+
+IF
+  IfValidForPartyDialogue(Myself)
+  Range("Door16",20)  // Door16
+  OpenState("Door16",TRUE)  // Door16
+  CombatCounter(0)
+  Global("OHH_necroticcomment","OH7300",0)
+THEN
+  RESPONSE #100
+    SetGlobal("OHH_necroticcomment","OH7300",1)
+END
+
+IF
+  IfValidForPartyDialogue(Myself)
+  Global("OHH_necroticcomment","OH7300",1)
+THEN
+  RESPONSE #100
+    StartDialogNoSet(Player1)
+END
+
+IF
+  Global("DornRomanceActive","GLOBAL",2)
+  Global("OHD_wraith","GLOBAL",2)
+  IfValidForPartyDialogue(Myself)
+  IfValidForPartyDialogue(Player1)
+  CombatCounter(0)
+  !See([ENEMY])
+THEN
+  RESPONSE #100
+    Dialog(Player1)
+    PlaySong(87)
+END
+
+IF
+  Global("DornRomanceActive","GLOBAL",2)
+  Global("OHD_wraith","GLOBAL",3)
+  AreaCheck("AR6000")
+  IfValidForPartyDialogue(Myself)
+  IfValidForPartyDialogue(Player1)
+  CombatCounter(0)
+  !See([ENEMY])
+THEN
+  RESPONSE #100
+    Dialog(Player1)
+    PlaySong(87)
+END
+
+IF
+  Global("DornRomanceActive","GLOBAL",2)
+  Global("OHD_wraith","GLOBAL",4)
+  AreaCheck("AR6100")
+  IfValidForPartyDialogue(Myself)
+  IfValidForPartyDialogue(Player1)
+  CombatCounter(0)
+  !See([ENEMY])
+THEN
+  RESPONSE #100
+    Dialog(Player1)
+    PlaySong(87)
+END

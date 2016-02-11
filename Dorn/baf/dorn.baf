@@ -1,0 +1,1467 @@
+IF
+  InParty(Myself)
+  Global("DornRomanceActive","GLOBAL",2)
+  OR(2)
+  Global("JaheiraRomanceActive","GLOBAL",1)
+  Global("JaheiraRomanceActive","GLOBAL",2)
+THEN
+  RESPONSE #100
+    SetGlobal("JaheiraRomanceActive","GLOBAL",3)
+END
+
+IF
+  InParty(Myself)
+  Global("DornRomanceActive","GLOBAL",2)
+  OR(2)
+  Global("NeeraRomanceActive","GLOBAL",1)
+  Global("NeeraRomanceActive","GLOBAL",2)
+THEN
+  RESPONSE #100
+    SetGlobal("NeeraRomanceActive","GLOBAL",3)
+END
+
+IF
+  InParty(Myself)
+  Global("DornRomanceActive","GLOBAL",2)
+  OR(2)
+  Global("AerieRomanceActive","GLOBAL",1)
+  Global("AerieRomanceActive","GLOBAL",2)
+THEN
+  RESPONSE #100
+    SetGlobal("AerieRomanceActive","GLOBAL",3)
+END
+
+IF
+  InParty(Myself)
+  Global("DornRomanceActive","GLOBAL",2)
+  OR(2)
+  Global("ViconiaRomanceActive","GLOBAL",1)
+  Global("ViconiaRomanceActive","GLOBAL",2)
+THEN
+  RESPONSE #100
+    SetGlobal("ViconiaRomanceActive","GLOBAL",3)
+END
+
+IF
+  InParty(Myself)
+  Global("DornRomanceActive","GLOBAL",2)
+  OR(2)
+  Global("AnomenRomanceActive","GLOBAL",1)
+  Global("AnomenRomanceActive","GLOBAL",2)
+THEN
+  RESPONSE #100
+    SetGlobal("AnomenRomanceActive","GLOBAL",3)
+END
+
+IF
+  InParty(Myself)
+  Global("DornRomanceActive","GLOBAL",2)
+  OR(2)
+  Global("HexxatRomanceActive","GLOBAL",1)
+  Global("HexxatRomanceActive","GLOBAL",2)
+THEN
+  RESPONSE #100
+    SetGlobal("HexxatomanceActive","GLOBAL",3)
+END
+
+IF
+  InParty(Myself)
+  Global("DornRomanceActive","GLOBAL",2)
+  OR(2)
+  Global("RasaadRomanceActive","GLOBAL",1)
+  Global("RasaadRomanceActive","GLOBAL",2)
+THEN
+  RESPONSE #100
+    SetGlobal("RasaadRomanceActive","GLOBAL",3)
+END
+
+IF
+  !InParty(Myself)
+  Allegiance(Myself,ENEMY)
+THEN
+  RESPONSE #100
+    ChangeAIScript("cfigh20a",OVERRIDE)
+END
+
+IF
+  InParty(Myself)
+  Global("OHD_patronstart","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("OHD_urgothoz_patron","GLOBAL",1)
+    SetGlobal("OHD_patronstart","LOCALS",1)
+END
+
+IF
+  IfValidForPartyDialogue(Myself)
+  Global("OHD_WEDDING_START","GLOBAL",0)
+  GlobalTimerExpired("OHD_CRASH_WEDDING","GLOBAL")
+  Global("OHD_WEDDING_IMPATIENT","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("OHD_WEDDING_IMPATIENT","LOCALS",1)
+    Continue()
+END
+
+IF
+  IfValidForPartyDialogue(Myself)
+  Global("OHD_WEDDING_IMPATIENT","LOCALS",1)
+THEN
+  RESPONSE #100
+    StartDialogNoSet(Player1)
+END
+
+IF
+  IfValidForPartyDialogue(Myself)
+  Global("OHD_WEDDING_START","GLOBAL",0)
+  GlobalTimerExpired("OHD_CRASH_WEDDING_2","GLOBAL")
+  Global("OHD_WEDDING_IMPATIENT","LOCALS",2)
+THEN
+  RESPONSE #100
+    SetGlobal("OHD_WEDDING_IMPATIENT","LOCALS",3)
+    Continue()
+END
+
+IF
+  IfValidForPartyDialogue(Myself)
+  Global("OHD_WEDDING_IMPATIENT","LOCALS",3)
+  Global("OHD_WEDDING_START","GLOBAL",0)
+THEN
+  RESPONSE #100
+    StartDialogNoSet(Player1)
+END
+
+IF
+  Global("OHD_PLOT","GLOBAL",0)
+  Global("OHD_KNOWS_DORN","LOCALS",1)
+  Global("OHD_JOURNAL_BEGIN","LOCALS",0)
+  !InParty(Myself)
+  NumTimesTalkedToGT(0)
+THEN
+  RESPONSE #100
+    SetGlobal("OHD_JOURNAL_BEGIN","LOCALS",1)
+    AddJournalEntry(91090,INFO)
+END
+
+IF
+  Global("OHD_PLOT","GLOBAL",0)
+  Global("OHD_KNOWS_DORN","LOCALS",0)
+  !InParty(Myself)
+  NumTimesTalkedToGT(0)
+  Global("OHD_JOURNAL_BEGIN","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("OHD_JOURNAL_BEGIN","LOCALS",1)
+    AddJournalEntry(91091,INFO)
+END
+
+IF
+  Global("OHD_PLOT","GLOBAL",1)
+  Global("OHD_KNOWS_DORN","LOCALS",0)
+  InParty(Myself)
+  GlobalLT("OHD_JOURNAL_BEGIN","LOCALS",2)
+THEN
+  RESPONSE #100
+    SetGlobal("OHD_KNOWS_DORN","LOCALS",1)
+    SetGlobal("OHD_JOURNAL_BEGIN","LOCALS",2)
+    EraseJournalEntry(91090)  // ~I encountered an old acquaintance, the half-orc Dorn Il-Khan, lurking outside Athkatla's Temple of the Radiant Heart this <DAYNIGHTALL>. His intent was clearly sinister. Whatever he plans, I want nothing to do with it.~
+    EraseJournalEntry(91091)  // ~I encountered a sinister half-orc named Dorn Il-Khan this <DAYNIGHTALL>, lurking round the Temple of the Radiant Heart. I know not what he has planned, and in truth I do not want to know.~
+    AddJournalEntry(91092,INFO)
+END
+
+IF
+  Global("OHD_PLOT","GLOBAL",1)
+  Global("OHD_KNOWS_DORN","LOCALS",1)
+  InParty(Myself)
+  GlobalLT("OHD_JOURNAL_BEGIN","LOCALS",2)
+THEN
+  RESPONSE #100
+    SetGlobal("OHD_KNOWS_DORN","LOCALS",1)
+    SetGlobal("OHD_JOURNAL_BEGIN","LOCALS",2)
+    EraseJournalEntry(91090)  // ~I encountered an old acquaintance, the half-orc Dorn Il-Khan, lurking outside Athkatla's Temple of the Radiant Heart this <DAYNIGHTALL>. His intent was clearly sinister. Whatever he plans, I want nothing to do with it.~
+    EraseJournalEntry(91091)  // ~I encountered a sinister half-orc named Dorn Il-Khan this <DAYNIGHTALL>, lurking round the Temple of the Radiant Heart. I know not what he has planned, and in truth I do not want to know.~
+    AddJournalEntry(91093,INFO)
+END
+
+IF
+  GlobalLT("OHD_PLOT","GLOBAL",3)
+  Dead("sctelwyn")  // ~Guardian Telwyn~
+  Global("OHD_JOURNAL_TELWYN1","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("OHD_JOURNAL_TELWYN1","LOCALS",1)
+    AddJournalEntry(91245,INFO)
+END
+
+IF
+  Global("OHD_PLOT","GLOBAL",3)
+  Global("OHD_JOURNAL_TELWYN2","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("OHD_JOURNAL_TELWYN2","LOCALS",1)
+    EraseJournalEntry(91214)  // ~Dorn's bloody pathDorn's patron, the glabrezu Ur-Gothoz, demands he find and slay Terpfen, a monk of Helm. To do so, we must go to Helm's temple and determine where Dorn's target can be found.~
+    EraseJournalEntry(91245)  // ~Our efforts to locate the paladin Terpfen have come to naught. Dorn's patron, Ur-Gothoz, may have to go unsatisfied in this matter.~
+    AddJournalEntry(91248,QUEST)
+END
+
+IF
+  PartyHasItem("OHDACORN")  // ~Acorn of Yarrow~
+  Dead("ohdtread")  // ~Treadsoft~
+  Dead("ohdyarr")  // ~Yarrow~
+  Global("OHD_JOURNAL_ACORN","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("OHD_JOURNAL_ACORN","LOCALS",1)
+    AddJournalEntry(91333,INFO)
+END
+
+IF
+  PartyHasItem("OHDSUMS1")  // ~Winterbrook's Summoning Stone~
+  Dead("OHDWNTRB")  // ~Winterbrook~
+  Global("OHD_JOURNAL_WINTER_STONE","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("OHD_JOURNAL_WINTER_STONE","LOCALS",1)
+    AddJournalEntry(90340,INFO)
+END
+
+IF
+  Dead("OHDTMFIL")  // ~The Magnificent Fil~
+  !PartyHasItem("OHDSUMS2")  // ~Fil's Summoning Stone~
+  Global("OHD_JOURNAL_KILL_FIL","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("OHD_JOURNAL_KILL_FIL","LOCALS",1)
+    AddJournalEntry(90358,INFO)
+END
+
+IF
+  PartyHasItem("OHDSUMS2")  // ~Fil's Summoning Stone~
+  Global("OHD_JOURNAL_FIL_STONE","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("OHD_JOURNAL_FIL_STONE","LOCALS",1)
+    SetGlobal("OHD_JOURNAL_KILL_FIL","LOCALS",1)
+    AddJournalEntry(90359,INFO)
+END
+
+IF
+  PartyHasItem("ohdsw2ha")  // ~Abyssal Blade~
+  Dead("OHDXACH")  // ~Xachrimos~
+  Global("OHD_JOURNAL_KILL_XACH","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("OHD_JOURNAL_KILL_XACH","LOCALS",1)
+    EraseJournalEntry(90351)  // ~Dorn's bloody pathTo bind Ur-Gothoz, we must locate the stones missing from the great tree's summoning circle, as well as an abyssal blade Dorn believes is carried by the tanar'ri that stalks Resurrection Gorge.~
+    AddJournalEntry(90351,QUEST_DONE)
+    EraseJournalEntry(90354)  // ~Dorn's bloody pathThe dryad Yarrow will allow us to enter Resurrection Gorge—but we must eliminate a tanar'ri lurking in the shadows of her great tree before she'll let us leave.~
+    AddJournalEntry(90354,QUEST_DONE)
+    AddJournalEntry(92454,INFO)
+END
+
+IF
+  Dead("OHDFIREJ")  // ~Bollard Firejaw~
+  GlobalLT("OHD_WEDDING_HOSTILE","OH5000",3)
+  Global("OHD_KILL_GUESTS","LOCALS",0)
+  IfValidForPartyDialogue(Myself)
+THEN
+  RESPONSE #100
+    SetGlobal("OHD_KILL_GUESTS","LOCALS",1)
+    Continue()
+END
+
+IF
+  Global("OHD_KILL_GUESTS","LOCALS",1)
+  IfValidForPartyDialogue(Myself)
+THEN
+  RESPONSE #100
+    StartDialogNoSet(Player1)
+END
+
+IF
+  Dead("OHDFIREJ")  // ~Bollard Firejaw~
+  !AreaCheckAllegiance(ENEMY)
+  IfValidForPartyDialogue(Myself)
+  Global("OHD_AFTER_WEDDING","LOCALS",0)
+  OR(2)
+  Global("OHD_WEDDING_HOSTILE","OH5000",3)
+  Global("OHD_WEDDING_MERCY","OH5000",1)
+THEN
+  RESPONSE #100
+    SetGlobal("OHD_AFTER_WEDDING","LOCALS",1)
+    AddexperienceParty(5000)
+    Continue()
+END
+
+IF
+  IfValidForPartyDialogue(Myself)
+  Global("OHD_AFTER_WEDDING","LOCALS",1)
+THEN
+  RESPONSE #100
+    StartDialogNoSet(Player1)
+END
+
+IF
+  Global("OHD_RANDOM_ENCOUNTER","LOCALS",0)
+  Global("OH_RANDOM_ENCOUNTER","GLOBAL",0)
+  Global("OHD_PLOT","GLOBAL",4)
+  InParty("dorn")  // dorn
+  !Dead("dorn")  // dorn
+THEN
+  RESPONSE #100
+    SetGlobal("OHD_RANDOM_ENCOUNTER","LOCALS",1)
+    SetGlobal("OH_RANDOM_ENCOUNTER","GLOBAL",1)
+    ForceRandomEncounter("ar0043")
+    SetGlobalTimer("OHD_grimmjaw_failsafe_timer","GLOBAL",60)
+END
+
+IF
+  Global("OHD_RANDOM_ENCOUNTER","LOCALS",1)
+  InParty("dorn")  // dorn
+  !Dead("dorn")  // dorn
+  Global("OHD_PLOT","GLOBAL",4)
+  OR(2)
+  GlobalTimerExpired("OHD_grimmjaw_failsafe_timer","GLOBAL")
+  OnCreation()
+THEN
+  RESPONSE #100
+    ForceRandomEncounter("ar0043")
+    SetGlobalTimer("OHD_grimmjaw_failsafe_timer","GLOBAL",60)
+END
+
+IF
+  Global("OHD_RANDOM_ENCOUNTER","LOCALS",1)
+  Global("OH_RANDOM_ENCOUNTER","GLOBAL",1)
+  Global("OHD_PLOT","GLOBAL",4)
+  !AreaCheck("ar0043")
+  OR(2)
+  !InParty("dorn")  // dorn
+  Dead("dorn")  // dorn
+THEN
+  RESPONSE #100
+    SetGlobal("OHD_RANDOM_ENCOUNTER","LOCALS",0)
+    SetGlobal("OH_RANDOM_ENCOUNTER","GLOBAL",0)
+    ForceRandomEncounter("")
+END
+
+IF
+  PartyHasItem("ohdscrl")  // ~Telwyn's Note~
+  Global("OHD_PLOT","GLOBAL",2)
+THEN
+  RESPONSE #100
+    RevealAreaOnMap("OH5300")
+    SetGlobal("OHD_PLOT","GLOBAL",3)
+    AddexperienceParty(5000)
+END
+
+IF
+  GlobalGT("OHD_PLOT","GLOBAL",0)
+  GlobalGT("OHD_WEDDING_START","GLOBAL",0)
+  IfValidForPartyDialogue(Myself)
+  Global("OHD_terpfendlg","GLOBAL",0)
+  !Dead("ohdterp")  // ~Guardian Terpfen~
+THEN
+  RESPONSE #100
+    SetGlobalTimer("OHD_terpfendlg_timer","LOCALS",SEVEN_DAYS)
+    SetGlobal("OHD_terpfendlg","GLOBAL",1)
+END
+
+IF
+  OR(2)
+  Global("OHD_terpfendlg","GLOBAL",1)
+  Global("OHD_terpfendlg","GLOBAL",3)
+  IfValidForPartyDialogue(Myself)
+  !Dead("ohdterp")  // ~Guardian Terpfen~
+  LevelGT(Myself,11)
+  GlobalTimerExpired("OHD_terpfendlg_timer","LOCALS")
+THEN
+  RESPONSE #100
+    IncrementGlobal("OHD_terpfendlg","GLOBAL",1)
+    Continue()
+END
+
+IF
+  IfValidForPartyDialogue(Myself)
+  !Dead("ohdterp")  // ~Guardian Terpfen~
+  LevelGT(Myself,11)
+  OR(2)
+  Global("OHD_terpfendlg","GLOBAL",2)
+  Global("OHD_terpfendlg","GLOBAL",4)
+THEN
+  RESPONSE #100
+    Dialog(Player1)
+END
+
+IF
+  Global("OHD_Camp_hostile","oh5300",1)
+  Global("OHD_PostCamp","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("OHD_PostCamp","LOCALS",1)
+END
+
+IF
+  GlobalGT("OHD_PostCamp","LOCALS",0)
+  GlobalLT("OHD_PostCamp","LOCALS",4)
+  IfValidForPartyDialogue(Myself)
+  IfValidForPartyDialogue(Player1)
+  CombatCounter(0)
+  !ActuallyInCombat()
+  !InMyArea([ENEMY])
+  Dead("ohdterp")  // ~Guardian Terpfen~
+  Dead("ohdhokk")  // ~Hokkney of Tyr~
+THEN
+  RESPONSE #100
+    IncrementGlobal("OHD_PostCamp","LOCALS",3)
+    StartDialogNoSet([PC])
+END
+
+IF
+  Global("OHD_Dorn_Gorge","OH5100",0)
+  IfValidForPartyDialogue(Myself)
+  IfValidForPartyDialogue(Player1)
+  AreaCheck("oh5100")
+THEN
+  RESPONSE #100
+    SetGlobal("OHD_Dorn_Gorge","OH5100",1)
+    Continue()
+END
+
+IF
+  Global("OHD_Dorn_Gorge","OH5100",1)
+  IfValidForPartyDialogue(Myself)
+  IfValidForPartyDialogue(Player1)
+THEN
+  RESPONSE #100
+    StartDialogNoSet(Player1)
+END
+
+IF
+  PartyHasItem("ohdsums1")  // ~Winterbrook's Summoning Stone~
+  PartyHasItem("ohdsums2")  // ~Fil's Summoning Stone~
+  PartyHasItem("ohdsums3")  // ~Xachrimos's Summoning Stone~
+  PartyHasItem("ohdsw2ha")  // ~Abyssal Blade~
+  Global("ohd_hasallitems","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("ohd_hasallitems","LOCALS",1)
+END
+
+IF
+  Global("OHD_oh5120_init","LOCALS",0)
+  IfValidForPartyDialogue(Myself)
+  IfValidForPartyDialogue(Player1)
+  !Global("ohd_hasallitems","LOCALS",1)
+  AreaCheck("oh5120")
+THEN
+  RESPONSE #100
+    SetGlobal("OHD_oh5120_init","LOCALS",1)
+    StartDialogNoSet(Player1)
+END
+
+IF
+  IfValidForPartyDialogue("dorn")  // dorn
+  Global("OHD_ritual","OH5120",1)
+  !Global("OHD_vernus_resurrected","OH5120",1)
+  AreaCheck("OH5120")
+THEN
+  RESPONSE #100
+    SetGlobal("OHD_ritual","OH5120",2)
+    Continue()
+END
+
+IF
+  IfValidForPartyDialogue(Myself)
+  Global("OHD_ritual","OH5120",2)
+THEN
+  RESPONSE #100
+    Dialog(Player1)
+END
+
+IF
+  Global("OHD_ritual","OH5120",4)
+  !GlobalTimerNotExpired("OHD_ritual_impatient","LOCALS")
+  AreaCheck("OH5120")
+  Range(Player1,10)
+  PartyHasItem("ohdsw2ha")  // ~Abyssal Blade~
+THEN
+  RESPONSE #100
+    SetGlobalTimer("OHD_ritual_impatient","LOCALS",12)
+    StartDialogNoSet(Player1)
+END
+
+IF
+  PartyHasItem("ohdsw2ha")  // ~Abyssal Blade~
+  !HasItem("ohdsw2ha",Myself)  // ~Abyssal Blade~
+  !StateCheck(Myself,STATE_REALLY_DEAD)
+  OR(2)
+  Global("OHD_urgothoz_sword","GLOBAL",1)
+  Global("OHD_azothet_sword","GLOBAL",1)
+THEN
+  RESPONSE #100
+    TakePartyItem("ohdsw2ha")
+END
+
+IF
+  PartyHasItem("ohdsw2hb")  // ~Abyssal Blade~
+  !HasItem("ohdsw2hb",Myself)  // ~Abyssal Blade~
+  !StateCheck(Myself,STATE_REALLY_DEAD)
+  Global("OHD_azothet_patron","GLOBAL",0)
+  Global("OHD_urgothoz_patron","GLOBAL",0)
+THEN
+  RESPONSE #100
+    TakePartyItem("ohdsw2hb")
+END
+
+IF
+  PartyHasItem("ohdsw2hc")  // ~Abyssal Blade~
+  !HasItem("ohdsw2hc",Myself)  // ~Abyssal Blade~
+  !StateCheck(Myself,STATE_REALLY_DEAD)
+  Global("OHD_azothet_patron","GLOBAL",0)
+  Global("OHD_urgothoz_patron","GLOBAL",0)
+THEN
+  RESPONSE #100
+    TakePartyItem("ohdsw2hc")
+END
+
+IF
+  HasItem("ohdsw2ha",Myself)  // ~Abyssal Blade~
+  !StateCheck(Myself,STATE_REALLY_DEAD)
+  Global("OHD_urgothoz_sword","GLOBAL",1)
+  !Global("OHD_azothet_sword","GLOBAL",1)
+THEN
+  RESPONSE #100
+    TransformItem("ohdsw2ha","ohdsw2hb")
+    StartDialogNoSet(Player1)
+END
+
+IF
+  HasItem("ohdsw2ha",Myself)  // ~Abyssal Blade~
+  !StateCheck(Myself,STATE_REALLY_DEAD)
+  !Global("OHD_urgothoz_sword","GLOBAL",1)
+  Global("OHD_azothet_sword","GLOBAL",1)
+THEN
+  RESPONSE #100
+    TransformItem("ohdsw2ha","ohdsw2hc")
+    StartDialogNoSet(Player1)
+END
+
+IF
+  HasItem("ohdsw2hb",Myself)  // ~Abyssal Blade~
+  !StateCheck(Myself,STATE_REALLY_DEAD)
+  Global("OHD_azothet_patron","GLOBAL",0)
+  Global("OHD_urgothoz_patron","GLOBAL",0)
+THEN
+  RESPONSE #100
+    TransformItem("ohdsw2hb","ohdsw2hd")
+    RemovePaladinHood()
+    ApplySpellRES("OHDTITLE",Myself)  // <Invalid Strref -1>
+    StartDialogNoSet(Player1)
+END
+
+IF
+  HasItem("ohdsw2hc",Myself)  // ~Abyssal Blade~
+  !StateCheck(Myself,STATE_REALLY_DEAD)
+  Global("OHD_azothet_patron","GLOBAL",0)
+  Global("OHD_urgothoz_patron","GLOBAL",0)
+THEN
+  RESPONSE #100
+    TransformItem("ohdsw2hc","ohdsw2hd")
+    RemovePaladinHood()
+    ApplySpellRES("OHDTITLE",Myself)  // <Invalid Strref -1>
+    StartDialogNoSet(Player1)
+END
+
+IF
+  Global("OHD_ritual","OH5120",6)
+  AreaCheck("OH5120")
+  !Range("RitualCircle",3)  // RitualCircle
+THEN
+  RESPONSE #100
+    MoveToObject("RitualCircle")
+END
+
+IF
+  Global("OHD_ritual","OH5120",6)
+  Global("OHD_ritual_azothet","OH5120",1)
+  AreaCheck("OH5120")
+  Range("RitualCircle",3)  // RitualCircle
+THEN
+  RESPONSE #100
+    ClearAllActions()
+    SetGlobal("OHD_ritual","OH5120",7)
+    Wait(1)
+    StartCutSceneMode()
+    StartCutScene("ohdcut8b")
+END
+
+IF
+  Global("OHD_ritual","OH5120",6)
+  Global("OHD_ritual_urgothoz","OH5120",1)
+  AreaCheck("OH5120")
+  Range("RitualCircle",3)  // RitualCircle
+THEN
+  RESPONSE #100
+    ClearAllActions()
+    SetGlobal("OHD_ritual","OH5120",7)
+    Wait(1)
+    StartCutSceneMode()
+    StartCutScene("ohdcut8a")
+END
+
+IF
+  Global("OHD_ritual_postazothet","OH5120",1)
+THEN
+  RESPONSE #100
+    SetGlobal("OHD_ritual_postazothet","OH5120",2)
+    ClearAllActions()
+    StartCutSceneMode()
+    StartCutScene("ohdcut9h")
+END
+
+IF
+  Global("OHD_ritual_postazothet","OH5120",2)
+  !See("ohdazoth")  // ~Azothet~
+THEN
+  RESPONSE #100
+    Wait(1)
+    StartDialogNoSet(Player1)
+END
+
+IF
+  GlobalGT("OHD_ritual","OH5120",8)
+  Global("OHD_END_REWARD","GLOBAL",0)
+  !AreaCheckAllegiance(ENEMY)
+  OR(2)
+  Dead("ohdazoth")  // ~Azothet~
+  Dead("ohdugoth")  // ~Ur-Gothoz~
+THEN
+  RESPONSE #100
+    SetGlobal("OHD_END_REWARD","GLOBAL",1)
+    AddXPObject(Player1,24000)
+    AddXPObject(Player2,24000)
+    AddXPObject(Player3,24000)
+    AddXPObject(Player4,24000)
+    AddXPObject(Player5,24000)
+    AddXPObject(Player6,24000)
+END
+
+IF
+  !HasItemEquipedReal("sw2hd1",Myself)
+  !Global("ohdornsw","LOCALS",0)
+THEN
+  RESPONSE #100
+    ApplySpellRES("ohdsw0",Myself)  // <Invalid Strref -1>
+    SetGlobal("ohdornsw","LOCALS",0)
+END
+
+IF
+  Global("OHH_Dornromancecheck","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("DornRomanceActive","GLOBAL",1)
+    SetGlobal("DornLovetalks","GLOBAL",1)
+    RealSetGlobalTimer("DornLovetalksTimer","GLOBAL",5400)
+    SetGlobal("OHH_Dornromancecheck","LOCALS",1)
+END
+
+IF
+  OR(2)
+  Global("DornRomanceActive","GLOBAL",1)
+  Global("DornRomanceActive","GLOBAL",2)
+  IfValidForPartyDialogue(Player1)
+  IfValidForPartyDialogue(Myself)
+  CombatCounter(0)
+  !See([ENEMY])
+  !AreaType(DUNGEON)
+  OR(10)
+  Global("DornLovetalks","GLOBAL",2)
+  Global("DornLovetalks","GLOBAL",4)
+  Global("DornLovetalks","GLOBAL",6)
+  Global("DornLovetalks","GLOBAL",10)
+  Global("DornLovetalks","GLOBAL",12)
+  Global("DornLovetalks","GLOBAL",14)
+  Global("DornLovetalks","GLOBAL",16)
+  Global("DornLovetalks","GLOBAL",20)
+  Global("DornLovetalks","GLOBAL",22)
+  Global("DornLovetalks","GLOBAL",24)
+THEN
+  RESPONSE #100
+    PlaySong(87)
+    Dialog(Player1)
+END
+
+IF
+  OR(2)
+  Global("DornRomanceActive","GLOBAL",1)
+  Global("DornRomanceActive","GLOBAL",2)
+  IfValidForPartyDialogue(Player1)
+  IfValidForPartyDialogue(Myself)
+  CombatCounter(0)
+  !See([ENEMY])
+  !AreaType(DUNGEON)
+  !Global("chapter","GLOBAL",5)
+  RealGlobalTimerExpired("DornLovetalksTimer","GLOBAL")
+  OR(7)
+  Global("DornLovetalks","GLOBAL",1)
+  Global("DornLovetalks","GLOBAL",3)
+  Global("DornLovetalks","GLOBAL",5)
+  Global("DornLovetalks","GLOBAL",9)
+  Global("DornLovetalks","GLOBAL",11)
+  Global("DornLovetalks","GLOBAL",15)
+  Global("DornLovetalks","GLOBAL",19)
+THEN
+  RESPONSE #100
+    IncrementGlobal("DornLovetalks","GLOBAL",1)
+END
+
+IF
+  OR(2)
+  Global("DornRomanceActive","GLOBAL",1)
+  Global("DornRomanceActive","GLOBAL",2)
+  IfValidForPartyDialogue(Player1)
+  IfValidForPartyDialogue(Myself)
+  CombatCounter(0)
+  !See([ENEMY])
+  Global("DornLovetalks","GLOBAL",13)
+  RealGlobalTimerExpired("DornLovetalksTimer","GLOBAL")
+  HPPercentGT(Myself,74)
+THEN
+  RESPONSE #100
+    IncrementGlobal("DornLovetalks","GLOBAL",1)
+END
+
+IF
+  OR(2)
+  Global("DornRomanceActive","GLOBAL",1)
+  Global("DornRomanceActive","GLOBAL",2)
+  IfValidForPartyDialogue(Player1)
+  IfValidForPartyDialogue(Myself)
+  CombatCounter(0)
+  !See([ENEMY])
+  Global("DornLovetalks","GLOBAL",83)
+  RealGlobalTimerExpired("DornLovetalksTimer","GLOBAL")
+  GlobalGT("AsylumPlot","GLOBAL",40)
+THEN
+  RESPONSE #100
+    IncrementGlobal("DornLovetalks","GLOBAL",1)
+END
+
+IF
+  OR(2)
+  AreaCheck("AR2800")
+  AreaCheck("AR2807")
+  Global("DornRomanceActive","GLOBAL",2)
+  IfValidForPartyDialogue(Player1)
+  IfValidForPartyDialogue(Myself)
+  CombatCounter(0)
+  !Range([ENEMY],15)
+  !Global("chapter","GLOBAL",5)
+  Global("DornLovetalks","GLOBAL",51)
+THEN
+  RESPONSE #100
+    IncrementGlobal("DornLovetalks","GLOBAL",1)
+    Continue()
+END
+
+IF
+  Global("DornRomanceActive","GLOBAL",2)
+  IfValidForPartyDialogue(Player1)
+  IfValidForPartyDialogue(Myself)
+  CombatCounter(0)
+  Global("DornLovetalks","GLOBAL",52)
+THEN
+  RESPONSE #100
+    PlaySong(87)
+    Dialog(Player1)
+END
+
+IF
+  OR(14)
+  Global("ViconiaRomanceActive","GLOBAL",1)
+  Global("ViconiaRomanceActive","GLOBAL",2)
+  Global("AnomenRomanceActive","GLOBAL",1)
+  Global("AnomenRomanceActive","GLOBAL",2)
+  Global("AerieRomanceActive","GLOBAL",1)
+  Global("AerieRomanceActive","GLOBAL",2)
+  Global("JaheiraRomanceActive","GLOBAL",1)
+  Global("JaheiraRomanceActive","GLOBAL",2)
+  Global("NeeraRomanceActive","GLOBAL",1)
+  Global("NeeraRomanceActive","GLOBAL",2)
+  Global("HexxatRomanceActive","GLOBAL",1)
+  Global("HexxatRomanceActive","GLOBAL",2)
+  Global("RasaadRomanceActive","GLOBAL",1)
+  Global("RasaadRomanceActive","GLOBAL",2)
+  Global("OHD_dornsex","GLOBAL",1)
+  Global("OHD_sexreactions","GLOBAL",0)
+THEN
+  RESPONSE #100
+    SetGlobal("OHD_sexreactions","GLOBAL",1)
+END
+
+IF
+  Global("OHD_sexreactions","GLOBAL",1)
+  IfValidForPartyDialogue("viconia")  // viconia
+  OR(2)
+  Global("ViconiaRomanceActive","GLOBAL",1)
+  Global("ViconiaRomanceActive","GLOBAL",2)
+THEN
+  RESPONSE #100
+    ActionOverride("viconia",Dialog(Player1))
+END
+
+IF
+  Global("OHD_sexreactions","GLOBAL",1)
+  IfValidForPartyDialogue("anomen")  // anomen
+  OR(2)
+  Global("AnomenRomanceActive","GLOBAL",1)
+  Global("AnomenRomanceActive","GLOBAL",2)
+THEN
+  RESPONSE #100
+    ActionOverride("anomen",Dialog(Player1))
+END
+
+IF
+  Global("OHD_sexreactions","GLOBAL",1)
+  IfValidForPartyDialogue("aerie")  // ~Aerie~
+  OR(2)
+  Global("AerieRomanceActive","GLOBAL",1)
+  Global("AerieRomanceActive","GLOBAL",2)
+THEN
+  RESPONSE #100
+    ActionOverride("aerie",Dialog(Player1))
+END
+
+IF
+  Global("OHD_sexreactions","GLOBAL",1)
+  IfValidForPartyDialogue("jaheira")  // jaheira
+  OR(2)
+  Global("JaheiraRomanceActive","GLOBAL",1)
+  Global("JaheiraRomanceActive","GLOBAL",2)
+THEN
+  RESPONSE #100
+    ActionOverride("jaheira",Dialog(Player1))
+END
+
+IF
+  Global("OHD_sexreactions","GLOBAL",1)
+  IfValidForPartyDialogue("neera")  // neera
+  OR(2)
+  Global("NeeraRomanceActive","GLOBAL",1)
+  Global("NeeraRomanceActive","GLOBAL",2)
+THEN
+  RESPONSE #100
+    ActionOverride("neera",Dialog(Player1))
+END
+
+IF
+  Global("OHD_sexreactions","GLOBAL",1)
+  IfValidForPartyDialogue("hexxat")  // hexxat
+  OR(2)
+  Global("HexxatRomanceActive","GLOBAL",1)
+  Global("HexxatRomanceActive","GLOBAL",2)
+THEN
+  RESPONSE #100
+    ActionOverride("hexxat",Dialog(Player1))
+END
+
+IF
+  Global("OHD_sexreactions","GLOBAL",1)
+  IfValidForPartyDialogue("rasaad")  // rasaad
+  OR(2)
+  Global("RasaadRomanceActive","GLOBAL",1)
+  Global("RasaadRomanceActive","GLOBAL",2)
+THEN
+  RESPONSE #100
+    ActionOverride("rasaad",Dialog(Player1))
+END
+
+IF
+  IfValidForPartyDialogue("dorn")  // dorn
+  IfValidForPartyDialogue("rasaad")  // rasaad
+  OR(2)
+  Global("DornRomanceActive","GLOBAL",1)
+  Global("DornRomanceActive","GLOBAL",2)
+  GlobalGT("DornLovetalks","GLOBAL",9)
+  OR(2)
+  Global("RasaadRomanceActive","GLOBAL",1)
+  Global("RasaadRomanceActive","GLOBAL",2)
+  GlobalGT("RasaadLovetalks","GLOBAL",9)
+  Global("OHD_rasaadconflict","GLOBAL",0)
+THEN
+  RESPONSE #100
+    SetGlobal("OHD_rasaadconflict","GLOBAL",1)
+    RealSetGlobalTimer("OHD_rasaadconflict_timer","GLOBAL",2700)
+    Continue()
+END
+
+IF
+  IfValidForPartyDialogue("dorn")  // dorn
+  IfValidForPartyDialogue("rasaad")  // rasaad
+  OR(2)
+  Global("DornRomanceActive","GLOBAL",1)
+  Global("DornRomanceActive","GLOBAL",2)
+  OR(2)
+  Global("RasaadRomanceActive","GLOBAL",1)
+  Global("RasaadRomanceActive","GLOBAL",2)
+  Global("OHD_rasaadconflict","GLOBAL",1)
+  RealGlobalTimerExpired("OHD_rasaadconflict_timer","GLOBAL")
+THEN
+  RESPONSE #100
+    SetGlobal("OHD_rasaadconflict","GLOBAL",2)
+    Continue()
+END
+
+IF
+  IfValidForPartyDialogue("dorn")  // dorn
+  IfValidForPartyDialogue("rasaad")  // rasaad
+  CombatCounter(0)
+  !AreaType(DUNGEON)
+  !See([ENEMY])
+  Global("OHD_rasaadconflict","GLOBAL",2)
+THEN
+  RESPONSE #100
+    Dialog(Player1)
+END
+
+IF
+  IfValidForPartyDialogue("dorn")  // dorn
+  IfValidForPartyDialogue("Aerie")  // ~Aerie~
+  OR(2)
+  Global("DornRomanceActive","GLOBAL",1)
+  Global("DornRomanceActive","GLOBAL",2)
+  GlobalGT("DornLovetalks","GLOBAL",9)
+  OR(2)
+  Global("AerieRomanceActive","GLOBAL",1)
+  Global("AerieRomanceActive","GLOBAL",2)
+  Global("OHD_aerieconflict","GLOBAL",0)
+THEN
+  RESPONSE #100
+    SetGlobal("OHD_aerieconflict","GLOBAL",1)
+    RealSetGlobalTimer("OHD_aerieconflict_timer","GLOBAL",2700)
+    Continue()
+END
+
+IF
+  IfValidForPartyDialogue("dorn")  // dorn
+  IfValidForPartyDialogue("Aerie")  // ~Aerie~
+  OR(2)
+  Global("DornRomanceActive","GLOBAL",1)
+  Global("DornRomanceActive","GLOBAL",2)
+  OR(2)
+  Global("AerieRomanceActive","GLOBAL",1)
+  Global("AerieRomanceActive","GLOBAL",2)
+  Global("OHD_aerieconflict","GLOBAL",1)
+  RealGlobalTimerExpired("OHD_aerieconflict_timer","GLOBAL")
+THEN
+  RESPONSE #100
+    SetGlobal("OHD_aerieconflict","GLOBAL",2)
+    Continue()
+END
+
+IF
+  IfValidForPartyDialogue("dorn")  // dorn
+  IfValidForPartyDialogue("Aerie")  // ~Aerie~
+  CombatCounter(0)
+  !AreaType(DUNGEON)
+  !See([ENEMY])
+  Global("OHD_aerieconflict","GLOBAL",2)
+THEN
+  RESPONSE #100
+    Dialog("aerie")
+END
+
+IF
+  IfValidForPartyDialogue("dorn")  // dorn
+  IfValidForPartyDialogue("anomen")  // anomen
+  OR(2)
+  Global("DornRomanceActive","GLOBAL",1)
+  Global("DornRomanceActive","GLOBAL",2)
+  GlobalGT("DornLovetalks","GLOBAL",9)
+  OR(2)
+  Global("AnomenRomanceActive","GLOBAL",1)
+  Global("AnomenRomanceActive","GLOBAL",2)
+  Global("OHD_anomenconflict","GLOBAL",0)
+THEN
+  RESPONSE #100
+    SetGlobal("OHD_anomenconflict","GLOBAL",1)
+    RealSetGlobalTimer("OHD_anomenconflict_timer","GLOBAL",2700)
+    Continue()
+END
+
+IF
+  IfValidForPartyDialogue("dorn")  // dorn
+  IfValidForPartyDialogue("anomen")  // anomen
+  OR(2)
+  Global("DornRomanceActive","GLOBAL",1)
+  Global("DornRomanceActive","GLOBAL",2)
+  OR(2)
+  Global("AnomenRomanceActive","GLOBAL",1)
+  Global("AnomenRomanceActive","GLOBAL",2)
+  Global("OHD_anomenconflict","GLOBAL",1)
+  RealGlobalTimerExpired("OHD_anomenconflict_timer","GLOBAL")
+THEN
+  RESPONSE #100
+    SetGlobal("OHD_anomenconflict","GLOBAL",2)
+    Continue()
+END
+
+IF
+  IfValidForPartyDialogue("dorn")  // dorn
+  IfValidForPartyDialogue("anomen")  // anomen
+  CombatCounter(0)
+  !AreaType(DUNGEON)
+  !See([ENEMY])
+  Global("OHD_anomenconflict","GLOBAL",2)
+THEN
+  RESPONSE #100
+    ActionOverride("anomen",Dialog("dorn"))
+END
+
+IF
+  IfValidForPartyDialogue("dorn")  // dorn
+  IfValidForPartyDialogue("jaheira")  // jaheira
+  OR(2)
+  Global("DornRomanceActive","GLOBAL",1)
+  Global("DornRomanceActive","GLOBAL",2)
+  GlobalGT("DornLovetalks","GLOBAL",9)
+  OR(2)
+  Global("JaheiraRomanceActive","GLOBAL",1)
+  Global("JaheiraRomanceActive","GLOBAL",2)
+  Global("OHD_jaheiraconflict","GLOBAL",0)
+THEN
+  RESPONSE #100
+    SetGlobal("OHD_jaheiraconflict","GLOBAL",1)
+    RealSetGlobalTimer("OHD_jaheiraconflict_timer","GLOBAL",2700)
+    Continue()
+END
+
+IF
+  IfValidForPartyDialogue("dorn")  // dorn
+  IfValidForPartyDialogue("jaheira")  // jaheira
+  OR(2)
+  Global("DornRomanceActive","GLOBAL",1)
+  Global("DornRomanceActive","GLOBAL",2)
+  OR(2)
+  Global("JaheiraRomanceActive","GLOBAL",1)
+  Global("JaheiraRomanceActive","GLOBAL",2)
+  Global("OHD_jaheiraconflict","GLOBAL",1)
+  RealGlobalTimerExpired("OHD_jaheiraconflict_timer","GLOBAL")
+THEN
+  RESPONSE #100
+    SetGlobal("OHD_jaheiraconflict","GLOBAL",2)
+    Continue()
+END
+
+IF
+  IfValidForPartyDialogue("dorn")  // dorn
+  IfValidForPartyDialogue("jaheira")  // jaheira
+  CombatCounter(0)
+  !AreaType(DUNGEON)
+  !See([ENEMY])
+  Global("OHD_jaheiraconflict","GLOBAL",2)
+THEN
+  RESPONSE #100
+    ActionOverride("jaheira",Dialog(Player1))
+END
+
+IF
+  IfValidForPartyDialogue("dorn")  // dorn
+  IfValidForPartyDialogue("viconia")  // viconia
+  OR(2)
+  Global("DornRomanceActive","GLOBAL",1)
+  Global("DornRomanceActive","GLOBAL",2)
+  GlobalGT("DornLovetalks","GLOBAL",9)
+  OR(2)
+  Global("ViconiaRomanceActive","GLOBAL",1)
+  Global("ViconiaRomanceActive","GLOBAL",2)
+  Global("OHD_viconiaconflict","GLOBAL",0)
+THEN
+  RESPONSE #100
+    SetGlobal("OHD_viconiaconflict","GLOBAL",1)
+    RealSetGlobalTimer("OHD_viconiaconflict_timer","GLOBAL",2700)
+    Continue()
+END
+
+IF
+  IfValidForPartyDialogue("dorn")  // dorn
+  IfValidForPartyDialogue("viconia")  // viconia
+  OR(2)
+  Global("DornRomanceActive","GLOBAL",1)
+  Global("DornRomanceActive","GLOBAL",2)
+  OR(2)
+  Global("ViconiaRomanceActive","GLOBAL",1)
+  Global("ViconiaRomanceActive","GLOBAL",2)
+  Global("OHD_viconiaconflict","GLOBAL",1)
+  RealGlobalTimerExpired("OHD_viconiaconflict_timer","GLOBAL")
+THEN
+  RESPONSE #100
+    SetGlobal("OHD_viconiaconflict","GLOBAL",2)
+    Continue()
+END
+
+IF
+  IfValidForPartyDialogue("dorn")  // dorn
+  IfValidForPartyDialogue("viconia")  // viconia
+  CombatCounter(0)
+  !AreaType(DUNGEON)
+  !See([ENEMY])
+  Global("OHD_viconiaconflict","GLOBAL",2)
+THEN
+  RESPONSE #100
+    ActionOverride("viconia",Dialog(Player1))
+END
+
+IF
+  InParty(Myself)
+  Global("OHD_anomenfight","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetInterrupt(FALSE)
+    LeaveParty()
+    SetLeavePartyDialogueFile()
+    ChangeAIScript("",DEFAULT)
+    ChangeAIScript("useitem",GENERAL)
+    ChangeAIScript("ohdano2",SPECIFICS)
+    ActionOverride("anomen",LeaveParty())
+    ActionOverride("anomen",SetLeavePartyDialogueFile())
+    ActionOverride("anomen",ChangeAIScript("",DEFAULT))
+    ActionOverride("anomen",ChangeAIScript("useitem",GENERAL))
+    ActionOverride("anomen",ChangeAIScript("ohdano",SPECIFICS))
+    SetInterrupt(TRUE)
+END
+
+IF
+  IfValidForPartyDialogue(Myself)
+  CombatCounter(0)
+  !Range("Phaere",6)  // Phaere
+  See(Player1)
+  Global("OHD_phaere","GLOBAL",1)
+  GlobalGT("PhaereInnuendo","GLOBAL",1)
+THEN
+  RESPONSE #100
+    StartDialogNoSet(Player1)
+END
+
+IF
+  Global("OH_Tanner","AR0502",1)
+  IfValidForPartyDialogue(Myself)
+  Delay(2)
+THEN
+  RESPONSE #100
+    StartDialogNoSet(Player1)
+END
+
+IF
+  Global("OH_UnderdarkComments","GLOBAL",1)
+  IfValidForPartyDialogue(Myself)
+  Delay(2)
+THEN
+  RESPONSE #100
+    StartDialogNoSet(Player1)
+END
+
+IF
+  Global("OH_Adalon","AR2102",1)
+  IfValidForPartyDialogue(Myself)
+  !IfValidForPartyDialogue("rasaad")  // rasaad
+  !IfValidForPartyDialogue("neera")  // neera
+  !IfValidForPartyDialogue("hexxat")  // hexxat
+THEN
+  RESPONSE #100
+    StartDialogNoSet(Player1)
+END
+
+IF
+  Global("OHD_suldanessellar","AR2800",0)
+  AreaCheck("AR2800")
+  IfValidForPartyDialogue(Myself)
+THEN
+  RESPONSE #100
+    SetGlobal("OHD_suldanessellar","AR2800",1)
+END
+
+IF
+  Global("OHD_suldanessellar","AR2800",1)
+  IfValidForPartyDialogue(Myself)
+  Delay(3)
+THEN
+  RESPONSE #100
+    Dialog(Player1)
+END
+
+IF
+  Global("DORN_ROMANCE_2","GLOBAL",2)
+  Global("OHD_KNOWS_DORN","LOCALS",0)
+  Global("OHD_import_once","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("OHD_import_once","LOCALS",1)
+    SetGlobal("OHD_KNOWS_DORN","LOCALS",1)
+END
+
+IF
+  OR(2)
+  Global("DornRomanceActive","GLOBAL",1)
+  Global("DornRomanceActive","GLOBAL",2)
+  IfValidForPartyDialogue(Player1)
+  IfValidForPartyDialogue(Myself)
+  CombatCounter(0)
+  !See([ENEMY])
+  !AreaType(DUNGEON)
+  !Global("chapter","GLOBAL",5)
+  Global("DornLovetalks","GLOBAL",21)
+  RealGlobalTimerExpired("DornLovetalksTimer","GLOBAL")
+THEN
+  RESPONSE #100
+    PlaySong(87)
+    IncrementGlobal("DornLovetalks","GLOBAL",1)
+    Dialog(Player1)
+END
+
+IF
+  OR(2)
+  Global("DornRomanceActive","GLOBAL",1)
+  Global("DornRomanceActive","GLOBAL",2)
+  IfValidForPartyDialogue(Player1)
+  IfValidForPartyDialogue(Myself)
+  CombatCounter(0)
+  !See([ENEMY])
+  !AreaType(DUNGEON)
+  !Global("chapter","GLOBAL",5)
+  Global("DornLovetalks","GLOBAL",23)
+  RealGlobalTimerExpired("DornLovetalksTimer","GLOBAL")
+THEN
+  RESPONSE #100
+    PlaySong(87)
+    IncrementGlobal("DornLovetalks","GLOBAL",1)
+    Dialog(Player1)
+END
+
+IF
+  OR(2)
+  Global("DornRomanceActive","GLOBAL",1)
+  Global("DornRomanceActive","GLOBAL",2)
+  IfValidForPartyDialogue(Player1)
+  IfValidForPartyDialogue(Myself)
+  CombatCounter(0)
+  !See([ENEMY])
+  !AreaType(DUNGEON)
+  !Global("chapter","GLOBAL",5)
+  Global("DornLovetalks","GLOBAL",25)
+  RealGlobalTimerExpired("DornLovetalksTimer","GLOBAL")
+THEN
+  RESPONSE #100
+    PlaySong(87)
+    IncrementGlobal("DornLovetalks","GLOBAL",1)
+    Dialog(Player1)
+END
+
+IF
+  OR(2)
+  Global("DornRomanceActive","GLOBAL",1)
+  Global("DornRomanceActive","GLOBAL",2)
+  IfValidForPartyDialogue(Player1)
+  IfValidForPartyDialogue(Myself)
+  CombatCounter(0)
+  !See([ENEMY])
+  !AreaType(DUNGEON)
+  !Global("chapter","GLOBAL",5)
+  Global("DornLovetalks","GLOBAL",27)
+  RealGlobalTimerExpired("DornLovetalksTimer","GLOBAL")
+THEN
+  RESPONSE #100
+    PlaySong(87)
+    IncrementGlobal("DornLovetalks","GLOBAL",1)
+    Dialog(Player1)
+END
+
+IF
+  OR(2)
+  Global("DornRomanceActive","GLOBAL",1)
+  Global("DornRomanceActive","GLOBAL",2)
+  IfValidForPartyDialogue(Player1)
+  IfValidForPartyDialogue(Myself)
+  CombatCounter(0)
+  !See([ENEMY])
+  !AreaType(DUNGEON)
+  !Global("chapter","GLOBAL",5)
+  Global("DornLovetalks","GLOBAL",29)
+  RealGlobalTimerExpired("DornLovetalksTimer","GLOBAL")
+THEN
+  RESPONSE #100
+    PlaySong(87)
+    IncrementGlobal("DornLovetalks","GLOBAL",1)
+    Dialog(Player1)
+END
+
+IF
+  OR(2)
+  Global("DornRomanceActive","GLOBAL",1)
+  Global("DornRomanceActive","GLOBAL",2)
+  IfValidForPartyDialogue(Player1)
+  IfValidForPartyDialogue(Myself)
+  CombatCounter(0)
+  !See([ENEMY])
+  !AreaType(DUNGEON)
+  !Global("chapter","GLOBAL",5)
+  Global("DornLovetalks","GLOBAL",31)
+  RealGlobalTimerExpired("DornLovetalksTimer","GLOBAL")
+THEN
+  RESPONSE #100
+    PlaySong(87)
+    IncrementGlobal("DornLovetalks","GLOBAL",1)
+    Dialog(Player1)
+END
+
+IF
+  OR(2)
+  Global("DornRomanceActive","GLOBAL",1)
+  Global("DornRomanceActive","GLOBAL",2)
+  IfValidForPartyDialogue(Player1)
+  IfValidForPartyDialogue(Myself)
+  CombatCounter(0)
+  !See([ENEMY])
+  !AreaType(DUNGEON)
+  !Global("chapter","GLOBAL",5)
+  Global("DornLovetalks","GLOBAL",33)
+  RealGlobalTimerExpired("DornLovetalksTimer","GLOBAL")
+THEN
+  RESPONSE #100
+    PlaySong(87)
+    IncrementGlobal("DornLovetalks","GLOBAL",1)
+    Dialog(Player1)
+END
+
+IF
+  OR(2)
+  Global("DornRomanceActive","GLOBAL",1)
+  Global("DornRomanceActive","GLOBAL",2)
+  IfValidForPartyDialogue(Player1)
+  IfValidForPartyDialogue(Myself)
+  CombatCounter(0)
+  !See([ENEMY])
+  !AreaType(DUNGEON)
+  !Global("chapter","GLOBAL",5)
+  Global("DornLovetalks","GLOBAL",35)
+  RealGlobalTimerExpired("DornLovetalksTimer","GLOBAL")
+THEN
+  RESPONSE #100
+    PlaySong(87)
+    IncrementGlobal("DornLovetalks","GLOBAL",1)
+    Dialog(Player1)
+END
+
+IF
+  OR(2)
+  Global("DornRomanceActive","GLOBAL",1)
+  Global("DornRomanceActive","GLOBAL",2)
+  IfValidForPartyDialogue(Player1)
+  IfValidForPartyDialogue(Myself)
+  CombatCounter(0)
+  !See([ENEMY])
+  !AreaType(DUNGEON)
+  !Global("chapter","GLOBAL",5)
+  Global("DornLovetalks","GLOBAL",37)
+  RealGlobalTimerExpired("DornLovetalksTimer","GLOBAL")
+THEN
+  RESPONSE #100
+    PlaySong(87)
+    IncrementGlobal("DornLovetalks","GLOBAL",1)
+    Dialog(Player1)
+END
+
+IF
+  OR(2)
+  Global("DornRomanceActive","GLOBAL",1)
+  Global("DornRomanceActive","GLOBAL",2)
+  IfValidForPartyDialogue(Player1)
+  IfValidForPartyDialogue(Myself)
+  CombatCounter(0)
+  !See([ENEMY])
+  !AreaType(DUNGEON)
+  !Global("chapter","GLOBAL",5)
+  Global("DornLovetalks","GLOBAL",39)
+  RealGlobalTimerExpired("DornLovetalksTimer","GLOBAL")
+THEN
+  RESPONSE #100
+    PlaySong(87)
+    IncrementGlobal("DornLovetalks","GLOBAL",1)
+    Dialog(Player1)
+END
+
+IF
+  OR(2)
+  Global("DornRomanceActive","GLOBAL",1)
+  Global("DornRomanceActive","GLOBAL",2)
+  IfValidForPartyDialogue(Player1)
+  IfValidForPartyDialogue(Myself)
+  CombatCounter(0)
+  !See([ENEMY])
+  !AreaType(DUNGEON)
+  !Global("chapter","GLOBAL",5)
+  Global("DornLovetalks","GLOBAL",43)
+  RealGlobalTimerExpired("DornLovetalksTimer","GLOBAL")
+THEN
+  RESPONSE #100
+    PlaySong(87)
+    IncrementGlobal("DornLovetalks","GLOBAL",1)
+    Dialog(Player1)
+END
+
+IF
+  OR(2)
+  Global("DornRomanceActive","GLOBAL",1)
+  Global("DornRomanceActive","GLOBAL",2)
+  IfValidForPartyDialogue(Player1)
+  IfValidForPartyDialogue(Myself)
+  CombatCounter(0)
+  !See([ENEMY])
+  !AreaType(DUNGEON)
+  !Global("chapter","GLOBAL",5)
+  Global("DornLovetalks","GLOBAL",45)
+  RealGlobalTimerExpired("DornLovetalksTimer","GLOBAL")
+THEN
+  RESPONSE #100
+    PlaySong(87)
+    IncrementGlobal("DornLovetalks","GLOBAL",1)
+    Dialog(Player1)
+END
+
+IF
+  OR(2)
+  Global("DornRomanceActive","GLOBAL",1)
+  Global("DornRomanceActive","GLOBAL",2)
+  IfValidForPartyDialogue(Player1)
+  IfValidForPartyDialogue(Myself)
+  CombatCounter(0)
+  !See([ENEMY])
+  !AreaType(DUNGEON)
+  !Global("chapter","GLOBAL",5)
+  Global("DornLovetalks","GLOBAL",47)
+  RealGlobalTimerExpired("DornLovetalksTimer","GLOBAL")
+THEN
+  RESPONSE #100
+    PlaySong(87)
+    IncrementGlobal("DornLovetalks","GLOBAL",1)
+    Dialog(Player1)
+END
+
+IF
+  OR(2)
+  Global("DornRomanceActive","GLOBAL",1)
+  Global("DornRomanceActive","GLOBAL",2)
+  IfValidForPartyDialogue(Player1)
+  IfValidForPartyDialogue(Myself)
+  CombatCounter(0)
+  !See([ENEMY])
+  !AreaType(DUNGEON)
+  !Global("chapter","GLOBAL",5)
+  Global("DornLovetalks","GLOBAL",49)
+  RealGlobalTimerExpired("DornLovetalksTimer","GLOBAL")
+THEN
+  RESPONSE #100
+    PlaySong(87)
+    IncrementGlobal("DornLovetalks","GLOBAL",1)
+    Dialog(Player1)
+END

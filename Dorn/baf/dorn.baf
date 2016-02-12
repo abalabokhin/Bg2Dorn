@@ -372,7 +372,7 @@ IF
   Global("OHD_terpfendlg","GLOBAL",3)
   IfValidForPartyDialogue(Myself)
   !Dead("ohdterp")  // ~Guardian Terpfen~
-  LevelGT(Myself,8)
+  LevelGT(Myself,11)
   GlobalTimerExpired("OHD_terpfendlg_timer","LOCALS")
 THEN
   RESPONSE #100
@@ -383,7 +383,7 @@ END
 IF
   IfValidForPartyDialogue(Myself)
   !Dead("ohdterp")  // ~Guardian Terpfen~
-  LevelGT(Myself,8)
+  LevelGT(Myself,11)
   OR(2)
   Global("OHD_terpfendlg","GLOBAL",2)
   Global("OHD_terpfendlg","GLOBAL",4)

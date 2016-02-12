@@ -12,7 +12,7 @@ It is still the same character, but with added talks comes a bit more depth and 
 
 3. Because of my playstyle, this mod might make more sense for male CHARNAME (I don't remember making any references to gender in new talks or editing any variable so there is high probability everything will be fine). Regarding Dorn's quest
 Spoiler:
- it is important that you reject Terpfen quest (dorn will ask every 3 days) as it will now start immediately after one of the lovetalks. It would also be best if you make him free of both patrons, otherwise the progression might make no sense. Post gorge quest lovetalk is now always about him being free, since I could not make the variables work for some reason. I apologize for this, but my coding knowledge is limited and in my interpretation, if Dorn has patron, then he has no room for Bhaalspawn.
+it would be best if you make him free of both patrons, otherwise the progression might make no sense. Post gorge quest lovetalk is now always about him being free, since I could not make the variables work for some reason. I apologize for this, but my coding knowledge is limited and in my interpretation, if Dorn has patron, then he has no room for Bhaalspawn.
 
 
 4. Somewhere in the romance (SOA), there is an alignment change. There are no variables implemented because of my coding limits, so try to give Dorn more or less consistent responses for the sake of your roleplay. And just to mention, shift won't happen toward good or neutral. Dorn stays evil.

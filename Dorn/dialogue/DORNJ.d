@@ -8223,14 +8223,11 @@ IF WEIGHT #52 /* Triggers after states #: 843 844 845 even though they appear af
 ~ THEN BEGIN 850 // from:
   SAY @1695 /* ~<CHARNAME>... I would have words with you.~ #96689 */
   IF ~~ THEN REPLY @1696 /* ~Will this end in another tantrum?~ #96695 */ DO ~IncrementGlobal("DornLovetalks","GLOBAL",1)
-RealSetGlobalTimer("DornLovetalksTimer","GLOBAL",5400)
-SetGlobal("OHD_terpfendlg","GLOBAL",4) ~ GOTO 851
+RealSetGlobalTimer("DornLovetalksTimer","GLOBAL",5400) ~ GOTO 851
   IF ~~ THEN REPLY @1697 /* ~Of course. After all, you've shown excellent self-control.~ #96696 */ DO ~IncrementGlobal("DornLovetalks","GLOBAL",1)
-RealSetGlobalTimer("DornLovetalksTimer","GLOBAL",5400)
-SetGlobal("OHD_terpfendlg","GLOBAL",4) ~ GOTO 851
+RealSetGlobalTimer("DornLovetalksTimer","GLOBAL",5400) ~ GOTO 851
   IF ~~ THEN REPLY @1698 /* ~What's this? An assasination attempt after a failed public brawl?~ #96697 */ DO ~IncrementGlobal("DornLovetalks","GLOBAL",1)
-RealSetGlobalTimer("DornLovetalksTimer","GLOBAL",5400)
-SetGlobal("OHD_terpfendlg","GLOBAL",4) ~ GOTO 851
+RealSetGlobalTimer("DornLovetalksTimer","GLOBAL",5400) ~ GOTO 851
 END
 
 IF ~~ THEN BEGIN 851 // from: 180.2 180.1 180.0

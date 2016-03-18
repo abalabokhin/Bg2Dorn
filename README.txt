@@ -31,4 +31,4 @@ This is it, I hope at least someone enjoys this mod :) feel free to give feedbac
 
 feedback can bedirected at beamdog forums for bg games to username "trinit"
 
-
+1.1- minor corrections to d. files, missing tildes on reply commands

@@ -19,7 +19,7 @@ it would be best if you make him free of both patrons, otherwise the progression
 
 5. I'm not a native english speaker so there is bound to be a ****ton of errors there. I tried my best, if anyone is willing to correct the tra files, go ahead.
 
-6. Additional credits: whiteagnus for cleaning up the code to be more friendly toward original game files. Big thanks! Some credits must go to Grim Squeaker, since I took his code from Tyris Flare mod (on G3 site) to make a few interjections for Dorn in Watchers Keep and TOB. There might be others but unfortunately nobody comes to mind. Frankly, I can't remember if I borrowed some text from some other mod, I'm quite sure I didn't. (I did this mod a few months ago and unfortunately didn't keep track. I also made a valygar romance mod that is a mix of other authors work for personal use only, so I might be mixing the two.). If I offended anyone's authorship, the mod will be taken down.
+6. Additional credits: whiteagnus for cleaning up the code to be more friendly toward original game files. Now the installation won't be so destructive towards original files. Big thanks! Some credits must go to Grim Squeaker, since I took his code from Tyris Flare mod (on G3 site) to make a few interjections for Dorn in Watchers Keep and TOB. There might be others but unfortunately nobody comes to mind. Frankly, I can't remember if I borrowed some text from some other mod, I'm quite sure I didn't. (I did this mod a few months ago and unfortunately didn't keep track. I also made a valygar romance mod that is a mix of other authors work for personal use only, so I might be mixing the two.). If I offended anyone's authorship, the mod will be taken down.
 
 7. Still no bodhi abduction. I can only make it work by borrowing someone else code and that is not an option for a public release. On the other hand the whole quest dedicated to Dorn kind of offsets this, content-wise. But that is just IMO.
 
@@ -30,3 +30,5 @@ it would be best if you make him free of both patrons, otherwise the progression
 This is it, I hope at least someone enjoys this mod :) feel free to give feedback and such, it might help me improve this.
 
 feedback can bedirected at beamdog forums for bg games to username "trinit"
+
+

@@ -2,7 +2,7 @@ BACKUP ~Dorn/Backup~
 
 AUTHOR ~trinit~ 
 
-VERSION ~v1~ 
+VERSION ~v2~ 
 
 AUTO_TRA ~Dorn/%s~
 
@@ -23,9 +23,52 @@ UNLESS ~CD_STATE_NOTVALID~
 COMPILE ~Dorn/dialogue/DORN.d~
 COMPILE ~Dorn/dialogue/DORN25J.d~
 COMPILE ~Dorn/dialogue/DORNJ.d~
+COMPILE ~Dorn/dialogue/bodhiabduction.d~
 
 
  // Scripts
 EXTEND_TOP ~Dorn.bcs~ ~Dorn/baf/Dorn.baf~
 EXTEND_TOP ~Dorn25.bcs~ ~Dorn/baf/Dorn25.baf~
 EXTEND_TOP ~Dornd.bcs~ ~Dorn/baf/Dornd.baf~
+
+
+  EXTEND_TOP ~ar0809.bcs~ ~Dorn/baf/VampireScripts/AR0809.baf~
+  
+  COMPILE ~Dorn/baf/VampireScripts/VAMPDOR.baf~
+          ~Dorn/baf/VampireScripts/DORNCUTV.baf~
+  EXTEND_BOTTOM ~bodhiamb.bcs~ ~Dorn/baf/VampireScripts/BODHIAMB.baf~
+  EXTEND_BOTTOM ~cleanse.bcs~ ~Dorn/baf/VampireScripts/CLEANSE.baf~
+  EXTEND_BOTTOM ~vampamb.bcs~ ~Dorn/baf/VampireScripts/VAMPAMB.baf~
+
+  ACTION_IF GAME_IS ~bg2ee~ BEGIN
+    ADD_JOURNAL EXISTING @4 @11 @26 USING ~Dorn/English/BodhiAbduction.tra~
+  END
+
+COPY ~Dorn/2da/OHDDORN2.2da~ ~override/OHDDORN2.2da~
+REPLACE ~91843~ @1
+COPY ~Dorn/2da/OHDDORN.2da~ ~override/OHDDORN.2da~
+REPLACE ~91842~ @2
+
+COPY ~Dorn/cre/vampdor.cre~ ~override~
+  SAY NAME1 @3
+  SAY NAME2 @4
+
+COPY  ~Dorn/item/dorbod.itm~ ~override~
+  SAY NAME1 @5
+  SAY NAME2 @6
+  SAY DESC @7
+
+COPY ~Dorn/Audio/DNR112.WAV~ ~override~
+COPY ~Dorn/Audio/DNR135.WAV~ ~override~
+COPY ~Dorn/Audio/DNR137.WAV~ ~override~
+COPY ~Dorn/Audio/DNR140.WAV~ ~override~
+COPY ~Dorn/Audio/DNT105.WAV~ ~override~
+COPY ~Dorn/Audio/DNT153.WAV~ ~override~
+COPY ~Dorn/Audio/DN115.WAV~ ~override~
+COPY ~Dorn/Audio/DNT121.WAV~ ~override~
+COPY ~Dorn/Audio/DNT33.WAV~ ~override~
+COPY ~Dorn/Audio/BD39823.WAV~ ~override~
+COPY ~Dorn/Audio/BD42706.WAV~ ~override~
+COPY ~Dorn/Audio/BD43972.WAV~ ~override~
+COPY ~Dorn/Audio/DN56.WAV~ ~override~
+COPY ~Dorn/Audio/BD44043.WAV~ ~override~

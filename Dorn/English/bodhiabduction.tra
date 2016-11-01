@@ -1,0 +1,51 @@
+@0    = ~You follow in the hopes of retrieving something dear to you. I say that the longer you keep this up, the more you will lose.~
+@1    = ~Take the half-orc, for instance. His lust for power dwarfs all other concerns in his mind. He would sacrifice anything to increase his might - even you. What say you, Dorn? I can give you more than this <RACE> ever could.~
+@2    = ~You sorely underestimate my loyalty to <CHARNAME>, vampire. I have no intention bowing to you or any other worldly entity. ~
+@3    = ~So the half-orc is going soft. Still, you underestimate me as well, Dorn. I am not a student of the art of torture, but a master. Follow me further, <CHARNAME>, and you will lose more than you can imagine. Starting now!~
+@4    = ~The Final Battle with Bodhi
+
+Bodhi appeared in an ambush shortly before I reached her haven, warning me that she was aware of my pursuit and stealing from me the one person that is dearest to my heart: Dorn.  Before she vanished and unleashed more of her undead creations upon me, Bodhi warned me that if I continue I will lose even more than I thought possible.  I cannot give up on the Rhynn Lanthorn... but now the life and immortal soul of the one I love is at stake, as well!~
+@5    = ~But... no, I have already prepared much for this meeting, <CHARNAME>. I did warn you that you would suffer great loss if you continued your push towards me.  I did not lie.~
+@6    = ~You have taken too much already!  You will return both Imoen's soul and Dorn!~
+@7    = ~And you have delivered on that promise.  Return Dorn and perhaps I will be merciful.~
+@8    = ~I would have hunted you for your theft of Dorn alone.  He is very important to me.~
+@9    = ~You place too much confidence in sentiment.  The theft of Dorn will not save you.~
+@10   = ~Ah yes, Dorn. Rugged and strong, and so deliciously corrupted. I offered him freely the power he craved for so long. Imagine my shock when instead he resisted and struggled! Nevertheless, a bite and a gaze were enough to make him much more... grateful.~
+@11   = ~The Final Battle with Bodhi
+
+Bodhi has turned Dorn into a vampire!  Or... or very nearly.  The process may not have been completed in the short time Bodhi has had him.  Hopefully something can be done or I will have lost him.  Perhaps the elven war sage might know some way of restoration... or Elhan...~
+@12   = ~An interesting ploy. Dorn, rugged and strong, and so deliciously corrupted. I freely offered him the power he craved for so long. Imagine my shock when instead he resisted and struggled! Nevertheless, a bite and a gaze were enough to make him much more... grateful.~
+@13   = ~I am at your disposal, mistress. Whatever you desire.~
+@14   = ~Don't you see, <CHARNAME>?  He is not even fully turned and he has betrayed you. Perhaps your trust was premature. Or misplaced.~
+@15   = ~Elhan! I've the half vampire body of Dorn here because of you! You'll tell me now!~
+@16   = ~A friend is afflicted by vampirism. An old book suggested that followers of Oghma might know something about that.~
+@17   = ~I'm looking for information about a tome that details the curing of vampirism.~
+@18   = ~Have you come seeking wisdom from the Binder of What is Known? The Wise God stands ready.~
+@19   = ~No, thank you, I have no need of help at the moment.~
+@20   = ~I lost a loved one in a battle with his sister, Bodhi.  I seek a means of curing him.~
+@21   = ~A loved one was taken by a vampire. What can I expect when I find them?~
+@22   = ~Someone I care about has fallen to a vampire. Is there any way to save them?~
+@23   = ~More illusions to torment me? Begone! Dorn-Il-Khan will not fall for tricks like these! Wait. I breathe... I'm alive again?~
+@24   = ~<CHARNAME>, you restored me! I wasn't sure, but you came through. I tried to fight back and resist, but Bodhi was... too strong.~
+@25   = ~I know you did, Dorn. I'm just glad to have you back in one piece.~
+@26   = ~The Final Battle with Bodhi
+
+While I had feared for some time that Bodhi's final revenge on me would be to take away Dorn forever, it seems that the information in the lorebook was right...  Amaunator's idol has restored Dorn not only to life, but has removed the vampiric curse from him, as well.~
+@27   = ~If it helps, Bodhi is a dust. I doubt she will bother us again.~
+@28   = ~It's fine, but we should probably avoid this happening again.~
+@29   = ~The whole ordeal was humiliating. To think I fell prey to a vampire we hunted, after all this time. I know this is not the first time you helped me, <CHARNAME>. I thank you for freeing me.~
+@30   = ~We help each other, Dorn, and I don't keep tabs. Rejoin the party and consider us even.~
+@31   = ~I thank you for your service, but I don't have room for you in the party right now.~
+@32   = ~Nothing could please me more. The whole ordeal was humiliating. To think I fell prey to a vampire after all this time. I know this is not the first time you helped me, <CHARNAME>. I thank you for freeing me.~
+@33   = ~Agreed, I would also prefer not to be a target beacuse of you, but it seems that this is the nature of our life, <CHARNAME>. You did save me, however. Again.~
+@34   = ~It was incredibly frustrating, and uncomfortably familiar, being so powerful and yet helpless. Weak and foolish. And worse, to have that power turned against you.~
+@35   = ~Are you serious? After everything we've been through, you're going to toss me aside?~
+@36   = ~Ha! Of course not, I was just joking. Rejoin.~
+@37   = ~I'm sorry, Dorn.~
+@38   = ~I see. Count yourself lucky that I will simply consider us even then.~
+@39   = ~I fell prey to my own weakness. Never again. Let us part ways then, but if we ever see each other again, I promise you only one of us will survive the meeting. Farewell.~
+@40   = ~I'm eager to continue our journeys together and put this behind us. Undeath turned out to be an unattractive prospect for achieving power.~
+@41   = ~I... WE worked hard to get rid of Ur-Gothoz and Azothet and I despised a new master forced upon me. But I did feel the thrill and with it came an amazing power. I enjoyed what Bodhi had showed me, but was left without free will once under her control.~
+@42   = ~I suppose I should consider this a learning experience, in more ways than one. Still, <CHARNAME>, I am more than glad to be at your side again. Now lead the way, Bodhi has fell and Irenicus awaits.~
+@43   = ~I guess you owe me. You can rejoin the party and think about how you will pay me back.~
+@44   = ~It's nothing personal, Dorn, but you are more trouble than it's worth. It's best if we go separate ways.~

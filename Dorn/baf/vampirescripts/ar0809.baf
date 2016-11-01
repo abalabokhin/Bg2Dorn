@@ -1,0 +1,8 @@
+IF
+  Global("DornVampire","GLOBAL",1)
+THEN
+  RESPONSE #1
+    SetGlobal("DornVampire","GLOBAL",2)
+    CreateCreature("VAMPDOR",[1473.332],2)
+    Continue()
+END

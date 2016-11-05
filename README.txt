@@ -1,13 +1,18 @@
 
-I'm pleased to announce that Dorn romance expansion has reached version 2. I strongly recommend you read this if you intend to install this mod.
+I'm pleased to announce that Dorn romance expansion has reached version 2.1! I strongly recommend you read this if you intend to install this mod.
 
-V2 NEW CONTENT:
-Bodhi abduction and new/modified epiloges for romanced Dorn. I added some Dorn's unused voiced lines, as well as few voced lines from older games to make talks feel more alive. There were also some corrections and minor changes to dialogues.
-
-This brings content to about 26 talks in SOA and 6 talks in TOB, including some interjections for TOB.
+This mod is a romance expansion for Dorn, and NPC character added into BG2:EE by Beamdog. This brings content to about 26 talks in SOA and 6 talks in TOB, including some interjections for TOB.
 The expansion adds new talks, expands and modifies existing ones and sometimes changes their order. Starting a new game is STRONGLY recommended, as the romance might not make sense otherwise.
 
 I believe this mod addresses what I perceived to be inconsistent progression of the lovetalks and relationship development, as well as brings the content to the same level as the vanilla romances, at least quantity-wise. If you happen to like it, I'm glad, if not, it's ok.
+
+
+V2.1
+With the GREAT help from EekanImp, text for Dorn expansion has been revised, tenses corrected, articles added/changed, typos corrected.... the list goes on. In any case, the experience as a whole should be much improved!
+In case you find errors, please report them!
+
+V2 NEW CONTENT:
+Bodhi abduction and new/modified epiloges for romanced Dorn. I added some Dorn's unused voiced lines, as well as few voced lines from older games to make talks feel more alive. There were also some corrections and minor changes to dialogues.
 
 
 INSTALLATION INSTRUCTIONS:
@@ -32,6 +37,7 @@ Consider it like this- if Dorn has a patron, he is effectively slave/bound to so
 5. If you notice grammar and similar errors, point them out to me please.
 
 6. Some credits must go to Grim Squeaker, since I took his code from Tyris Flare mod (on G3 site) to make a few interjections for Dorn in Watchers Keep and TOB. I also used his code to make bodhi abduction and epilogues work.
+Big credit also goes to EekanImp for all the great suggestions and corrections of the text that helped to integrate this mod more seamlessly into the game. Thank you!
 
 7. I take no responsibility for any damage caused to your game, computer, mental health or otherwise if you decide to download, install and play this mod. You have been warned.
 
@@ -40,10 +46,20 @@ Please leave feedback if you played this mod. Feedback can be directed at beamdo
 
 Thank you for reading!
 
+2.1- corrected typos
+   - tenses corrected
+   - some dialogued lines changed and improved - credit for this whole update goes to EekanImp!
+
 2.0- added bodhi abduction
    - added epilogues
    - added voiced lines
    - minor dialogue alterations
    
-1.1- minor corrections to d. files
+1.2- minor corrections to d. files
    - corrected missing tildes on reply commands
+   
+1.1- new code for the mod, thanks to WhiteAgnus!
+
+1.0- mod release
+
+  

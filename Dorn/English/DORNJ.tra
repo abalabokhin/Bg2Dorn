@@ -1,4 +1,4 @@
-@0    = ~Haven't you paid attention to anything I said, <CHARNAME>? After all we have been through, and all we have shared, I will not abandon you, not now, not ever.~
+@0    = ~Haven't you paid attention to anything I said, <CHARNAME>? After all we have been through, and all we have shared, I will not abandon you. Not now, not ever.~
 @1    = ~Besides, neither you nor I will be satisfied with this husk of a <PRO_MANWOMAN> standing before me.~
 @2    = ~Funny. I'm sure your captor was suitably entertained.~
 @3    = ~Sulking is how you deal with harsh words? If I recall correctly, I was betrayed, not ambushed, <PRO_RACE>. There is a difference.~
@@ -259,7 +259,7 @@
 @258  = ~I believe it will. Relative stability will offer room for some interesting opportunities.~
 @259  = ~I believe it will. I find passion and force to be excellent motivators.~
 @260  = ~I believe it will. There should be much less room for setbacks and surprises now.~
-@261  = ~It will probaly take time to fully adapt to new concepts but it seems I have chosen my course for now.~
+@261  = ~It will probably take time to fully adapt to new concepts but it seems I have chosen my course for now.~
 @262  = ~That you did.~
 @263  = ~Whatever you say. No skin off my back.~
 @264  = ~I like what I'm seeing. Even more than usual, I mean.~

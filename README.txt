@@ -6,8 +6,6 @@ The expansion adds new talks, expands and modifies existing ones and sometimes c
 
 I believe this mod addresses what I perceived to be inconsistent progression of the lovetalks and relationship development, as well as brings the content to the same level as the vanilla romances, at least quantity-wise. If you happen to like it, I'm glad, if not, it's ok.
 
-
-V2.1
 With the GREAT help from EekanImp, text for Dorn expansion has been revised, tenses corrected, articles added/changed, typos corrected.... the list goes on. In any case, the experience as a whole should be much improved!
 In case you find errors, please report them!
 
@@ -45,6 +43,8 @@ Big credit also goes to EekanImp for all the great suggestions and corrections o
 Please leave feedback if you played this mod. Feedback can be directed at beamdog forums for bg games to username "trinit". You can also leave feedback to the topic for this mod- https://forums.beamdog.com/discussion/47294/mod-dorn-romance-expansion-for-bgii-ee-v2
 
 Thank you for reading!
+
+2.2- updated setup-dorn.exe to weidu v240.00
 
 2.1- corrected typos
    - tenses corrected

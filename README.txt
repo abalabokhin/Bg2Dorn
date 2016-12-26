@@ -1,5 +1,5 @@
 
-I'm pleased to announce that Dorn romance expansion has reached version 2.1! I strongly recommend you read this if you intend to install this mod.
+I'm pleased to announce that Dorn romance expansion has reached version 2.3! I strongly recommend you read this if you intend to install this mod.
 
 This mod is a romance expansion for Dorn, and NPC character added into BG2:EE by Beamdog. This brings content to about 26 talks in SOA and 6 talks in TOB, including some interjections for TOB.
 The expansion adds new talks, expands and modifies existing ones and sometimes changes their order. Starting a new game is STRONGLY recommended, as the romance might not make sense otherwise.
@@ -43,6 +43,8 @@ Big credit also goes to EekanImp for all the great suggestions and corrections o
 Please leave feedback if you played this mod. Feedback can be directed at beamdog forums for bg games to username "trinit". You can also leave feedback to the topic for this mod- https://forums.beamdog.com/discussion/47294/mod-dorn-romance-expansion-for-bgii-ee-v2
 
 Thank you for reading!
+
+2.3- modified/updated dornj.d file to correct issues with internal labeling that prevented installation of the mod. it seemed to affect people with large amount of mods installed, real culprit was not found atm
 
 2.2- updated setup-dorn.exe to weidu v240.00
 

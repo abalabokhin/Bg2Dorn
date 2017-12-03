@@ -44,7 +44,7 @@ Please leave feedback if you played this mod. Feedback can be directed at beamdo
 
 Thank you for reading!
 
-2.4- fixed a bug where dorn would try to talk to charname constantly after they arrived in Underdark. It was caused by some old code that pointed to extra talks in underdark, but those were removed. If you had this bug, please reinstall the mod with newest version
+2.4- fixed a bug where dorn would try to talk to charname constantly after they arrived in Underdark. It was caused by some old code that pointed to extra talks in underdark, but those were removed. If you had this bug, please reinstall the mod with newest version and if possible restart the game with dorn just before first entering the underdark.
 
 2.3- modified/updated dornj.d file to correct issues with internal labeling that prevented installation of the mod. it seemed to affect people with large amount of mods installed, real culprit was not found atm but the error should be solved
 

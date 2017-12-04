@@ -10,7 +10,7 @@ With the GREAT help from EekanImp, text for Dorn expansion has been revised, ten
 In case you find errors, please report them!
 
 V3 NEW CONTENT:
-With the permission from Aeryn, author of Haer'Dalis Romance over at Spellhold Studious, I used a code and template from her mod to create three additional talks in Underdark. The talks add some content to otherwise empty stretch of the game and are not really romantic but will probably make more sense if you have commited relationship already.
+With the permission from Aeryn, author of Haer'Dalis Romance over at Spellhold Studious, I used a code and template from her mod to add three additional talks in Underdark. The talks add some content to otherwise empty stretch of the game. Talks will probably make more sense if you have a commited relationship already.
 
 V2 NEW CONTENT:
 Bodhi abduction and new/modified epiloges for romanced Dorn. I added some Dorn's unused voiced lines, as well as few voced lines from older games to make talks feel more alive. There were also some corrections and minor changes to dialogues.

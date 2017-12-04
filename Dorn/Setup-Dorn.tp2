@@ -59,7 +59,6 @@ COPY  ~Dorn/item/dorbod.itm~ ~override~
   SAY NAME2 @6
   SAY DESC @7
 
-COPY ~Dorn/Audio/MXDORNA.acm~ ~music/mxdorn/MXDORNA.acm~
 COPY ~Dorn/Audio/DNR112.WAV~ ~override~
 COPY ~Dorn/Audio/DNR135.WAV~ ~override~
 COPY ~Dorn/Audio/DNR137.WAV~ ~override~

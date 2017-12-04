@@ -1,5 +1,5 @@
 
-I'm pleased to announce that Dorn romance expansion has reached version 2.3! I strongly recommend you read this if you intend to install this mod.
+I'm pleased to announce that Dorn romance expansion has reached version 3.0! I strongly recommend you read this if you intend to install this mod.
 
 This mod is a romance expansion for Dorn, and NPC character added into BG2:EE by Beamdog. This brings content to about 26 talks in SOA and 6 talks in TOB, including some interjections for TOB.
 The expansion adds new talks, expands and modifies existing ones and sometimes changes their order. Starting a new game is STRONGLY recommended, as the romance might not make sense otherwise.
@@ -8,6 +8,9 @@ I believe this mod addresses what I perceived to be inconsistent progression of 
 
 With the GREAT help from EekanImp, text for Dorn expansion has been revised, tenses corrected, articles added/changed, typos corrected.... the list goes on. In any case, the experience as a whole should be much improved!
 In case you find errors, please report them!
+
+V3 NEW CONTENT:
+With the permission from Aeryn, author of Haer'Dalis Romance over at Spellhold Studious, I used a code and template from her mod to create three additional talks in Underdark. The talks add some content to otherwise empty stretch of the game and are not really romantic but will probably make more sense if you have commited relationship already.
 
 V2 NEW CONTENT:
 Bodhi abduction and new/modified epiloges for romanced Dorn. I added some Dorn's unused voiced lines, as well as few voced lines from older games to make talks feel more alive. There were also some corrections and minor changes to dialogues.
@@ -43,6 +46,8 @@ Big credit also goes to EekanImp for all the great suggestions and corrections o
 Please leave feedback if you played this mod. Feedback can be directed at beamdog forums for bg games to username "trinit". You can also leave feedback to the topic for this mod- https://forums.beamdog.com/discussion/47294/mod-dorn-romance-expansion-for-bgii-ee-v2
 
 Thank you for reading!
+
+3.0- added three new talks in Underdark
 
 2.4- fixed a bug where dorn would try to talk to charname constantly after they arrived in Underdark. It was caused by some old code that pointed to extra talks in underdark, but those were removed. If you had this bug, please reinstall the mod with newest version and if possible restart the game with dorn just before first entering the underdark.
 

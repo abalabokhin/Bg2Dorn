@@ -3,7 +3,7 @@ I'm pleased to announce that Dorn romance expansion has reached version 3.0! I  
 
 ABOUT
 This mod is a romance expansion for Dorn, and NPC character added into BG2:EE by Beamdog. This brings content to about 29 talks in SOA and 6 talks in TOB, including some interjections for TOB.
-The expansion adds new talks, expands and modifies existing ones and sometimes changes their order. It adds Bodhi abduction and new/modified epilogues for romanced Dorn. Some of Dorn's unused voiced lines in bg2:ee and few voiced lines from other games (bg:ee and sod) were added to make talks feel more alive.
+The expansion adds new talks, expands and modifies existing ones and sometimes changes their order. It adds Bodhi abduction and new/modified epilogues for romanced Dorn. Some of Dorn's unused voiced lines in bg2:ee and few voiced lines from other games (bg:ee and sod) were added to make the talks feel more alive.
 
 I believe this mod brings the content to the same level as the vanilla romances, at least quantity-wise. If you happen to like it, I'm glad, if not, it's ok.
 

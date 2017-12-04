@@ -1,4 +1,4 @@
-I'm pleased to announce that Dorn romance expansion has reached version 3.0! I  strongly recommend you read this whole post again if you intend to install this mod.
+I'm pleased to announce that Dorn romance expansion has reached version 3.0! I  strongly recommend you read this README if you intend to install this mod.
 
 
 ABOUT

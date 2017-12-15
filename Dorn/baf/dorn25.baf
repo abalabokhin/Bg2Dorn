@@ -1,0 +1,56 @@
+IF
+  Global("SaradushSacked","GLOBAL",1)
+  Global("DornRomanceActive","GLOBAL",2)
+  Global("OHD_saradushtalk","GLOBAL",0)
+  IfValidForPartyDialogue(Myself)
+  IfValidForPartyDialogue(Player1)
+  CombatCounter(0)
+  !See([ENEMY])
+  !AreaType(DUNGEON)
+  PartyRested()
+THEN
+  RESPONSE #100
+    PlaySong(87)
+    SetGlobal("OHD_saradushtalk","GLOBAL",1)
+END
+
+IF
+  Global("DornRomanceActive","GLOBAL",2)
+  Global("OHD_wraith","GLOBAL",2)
+  IfValidForPartyDialogue(Myself)
+  IfValidForPartyDialogue(Player1)
+  CombatCounter(0)
+  !See([ENEMY])
+THEN
+  RESPONSE #100
+    Dialog(Player1)
+    PlaySong(87)
+END
+
+IF
+  Global("DornRomanceActive","GLOBAL",2)
+  Global("OHD_wraith","GLOBAL",3)
+  AreaCheck("AR6000")
+  IfValidForPartyDialogue(Myself)
+  IfValidForPartyDialogue(Player1)
+  CombatCounter(0)
+  !See([ENEMY])
+THEN
+  RESPONSE #100
+    Dialog(Player1)
+    PlaySong(87)
+END
+
+IF
+  Global("DornRomanceActive","GLOBAL",2)
+  Global("OHD_wraith","GLOBAL",4)
+  AreaCheck("AR6100")
+  IfValidForPartyDialogue(Myself)
+  IfValidForPartyDialogue(Player1)
+  CombatCounter(0)
+  !See([ENEMY])
+THEN
+  RESPONSE #100
+    Dialog(Player1)
+    PlaySong(87)
+END

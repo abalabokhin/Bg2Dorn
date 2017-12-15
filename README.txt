@@ -53,7 +53,7 @@ b. when you exit underdark, sometimes the cutscene will interrupt romance talk. 
 Please leave feedback if you played this mod. Feedback can be directed at beamdog forums for bg games to username "trinit". You can also leave feedback to the topic for this mod- https://forums.beamdog.com/discussion/47294/mod-dorn-romance-expansion-for-bgii-ee-v2
 
 Thank you for reading!
-3.1- cleaned up main baf files to remove duplicates and to ensure better compatibility with 2.5 update
+3.1- cleaned up main baf files to remove duplicates and ensure better compatibility with 2.5 update (kept old files as backups)
    - fixed Dorn stuttering and refusing commands when he should be initiating Terpfen questline 
 
 3.0- added three new talks in Underdark

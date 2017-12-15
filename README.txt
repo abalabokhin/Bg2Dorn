@@ -1,4 +1,4 @@
-I'm pleased to announce that Dorn romance expansion has reached version 3.0! I  strongly recommend you read this README if you intend to install this mod.
+I'm pleased to announce that Dorn romance expansion has reached version 3.1! I  strongly recommend you read this README if you intend to install this mod.
 
 
 ABOUT
@@ -43,7 +43,7 @@ Thanks, all of you!
 
 
 8. KNOWN BUGS:
-a. it may or may not happen, but if you are yet to have dorn's quest and he suddenly stutters and refuses all commands (problem is described here: https://forums.beamdog.com/discussion/64410/bug-dorn-suddenly-can-walk-only-few-meters-and-stops-whatever-i-order-him-to-do ), open the console (press "crtl"+"space") and copy-paste following: 
+a. -this bug should be fixed now but I'll leave the solution here anyway, just in case: if you are yet to have dorn's quest and he suddenly stutters and refuses all commands, open the console (press "crtl"+"space") and copy-paste following: 
 
 C:SetGlobal("OHD_terpfendlg","GLOBAL",2)
 and press "enter". this should solve the stuttering and enable quest to proceed as normal. just make sure to accept the quest when dorn speaks, and that's it.
@@ -53,6 +53,8 @@ b. when you exit underdark, sometimes the cutscene will interrupt romance talk. 
 Please leave feedback if you played this mod. Feedback can be directed at beamdog forums for bg games to username "trinit". You can also leave feedback to the topic for this mod- https://forums.beamdog.com/discussion/47294/mod-dorn-romance-expansion-for-bgii-ee-v2
 
 Thank you for reading!
+3.1- cleaned up main baf files to remove duplicates and to ensure better compatibility with 2.5 update
+   - fixed Dorn stuttering and refusing commands when he should be initiating Terpfen questline 
 
 3.0- added three new talks in Underdark
 

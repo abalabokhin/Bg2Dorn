@@ -1,0 +1,18 @@
+IF
+  OR(2)
+  Global("DornRomanceActive","GLOBAL",1)
+  Global("DornRomanceActive","GLOBAL",2)
+  IfValidForPartyDialogue(Player1)
+  IfValidForPartyDialogue(Myself)
+  CombatCounter(0)
+  !See([ENEMY])
+  !AreaType(DUNGEON)
+  !Global("chapter","GLOBAL",5)
+  Global("DornLovetalks","GLOBAL",41)
+  RealGlobalTimerExpired("DornLovetalksTimer","GLOBAL")
+THEN
+  RESPONSE #100
+    PlaySong(87)
+    IncrementGlobal("DornLovetalks","GLOBAL",1)
+    Dialog(Player1)
+END

@@ -55,6 +55,7 @@ Please leave feedback if you played this mod. Feedback can be directed at beamdo
 Thank you for reading!
 3.1- cleaned up main baf files to remove duplicates and ensure better compatibility with 2.5 update (kept old files as backups)
    - fixed Dorn stuttering and refusing commands when he should be initiating Terpfen questline 
+   - updated setup-dorn.exe to weidu v242
 
 3.0- added three new talks in Underdark
 

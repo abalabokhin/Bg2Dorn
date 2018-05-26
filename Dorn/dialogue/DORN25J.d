@@ -317,13 +317,13 @@ END ABAZIGAL 2
 INTERJECT GORAPP1 10 dornodren
   == dorn25J IF ~InParty("dorn")
                  !StateCheck("dorn",CD_STATE_NOTVALID)
-                 GlobalLT("Chapter","GLOBAL",8)~ THEN @88
+                 GlobalLT("Chapter","GLOBAL",%bg2_chapter_8%)~ THEN @88
 END GORAPP1 11
 
 INTERJECT GORAPP1 10 dornodren
   == dorn25J IF ~InParty("dorn")
                  !StateCheck("dorn",CD_STATE_NOTVALID)
-                 GlobalGT("Chapter","GLOBAL",7)~ THEN @89
+                 GlobalGT("Chapter","GLOBAL",%bg2_chapter_7%)~ THEN @89
 END GORAPP1 11
 
 

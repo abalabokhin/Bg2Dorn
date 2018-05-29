@@ -2,9 +2,22 @@ BACKUP ~Dorn/Backup~
 
 AUTHOR ~trinit~ 
 
-VERSION ~v3.0~ 
+VERSION ~v3.2~ 
 
 AUTO_TRA ~Dorn/%s~
+
+ALWAYS
+  ACTION_IF GAME_IS ~eet~ BEGIN
+    OUTER_SET bg2_chapter = 12
+  END ELSE BEGIN
+    OUTER_SET bg2_chapter = 0
+  END
+  OUTER_FOR (i=1; i<=10; i=i+1) BEGIN
+    OUTER_SET bg2_chapter = bg2_chapter + 1
+    OUTER_SPRINT name_source ~bg2_chapter_%i%~
+    OUTER_SET EVAL ~%name_source%~ = bg2_chapter
+  END
+END
 
 LANGUAGE ~English~ ~English~ ~Dorn/English/Setup-Dorn.tra~
 
@@ -20,11 +33,11 @@ UNLESS ~CD_STATE_NOTVALID~
 
  // Dialogue
 
-COMPILE ~Dorn/dialogue/DORN.d~
-COMPILE ~Dorn/dialogue/DORN25J.d~
-COMPILE ~Dorn/dialogue/DORNJ.d~
-COMPILE ~Dorn/dialogue/interjections.d~
-COMPILE ~Dorn/dialogue/bodhiabduction.d~
+COMPILE EVALUATE_BUFFER ~Dorn/dialogue/DORN.d~
+COMPILE EVALUATE_BUFFER ~Dorn/dialogue/DORN25J.d~
+COMPILE EVALUATE_BUFFER ~Dorn/dialogue/DORNJ.d~
+COMPILE EVALUATE_BUFFER ~Dorn/dialogue/interjections.d~
+COMPILE EVALUATE_BUFFER ~Dorn/dialogue/bodhiabduction.d~
 
 
  // Scripts
@@ -35,13 +48,13 @@ EXTEND_TOP ~Dornd.bcs~ ~Dorn/baf/Dornd.baf~
 
   EXTEND_TOP ~ar0809.bcs~ ~Dorn/baf/VampireScripts/AR0809.baf~
   
-  COMPILE ~Dorn/baf/VampireScripts/VAMPDOR.baf~
-          ~Dorn/baf/VampireScripts/DORNCUTV.baf~
+  COMPILE EVALUATE_BUFFER ~Dorn/baf/VampireScripts/VAMPDOR.baf~
+  COMPILE EVALUATE_BUFFER ~Dorn/baf/VampireScripts/DORNCUTV.baf~
   EXTEND_BOTTOM ~bodhiamb.bcs~ ~Dorn/baf/VampireScripts/BODHIAMB.baf~
   EXTEND_BOTTOM ~cleanse.bcs~ ~Dorn/baf/VampireScripts/CLEANSE.baf~
   EXTEND_BOTTOM ~vampamb.bcs~ ~Dorn/baf/VampireScripts/VAMPAMB.baf~
 
-  ACTION_IF GAME_IS ~bg2ee~ BEGIN
+  ACTION_IF GAME_IS ~bg2ee eet~ BEGIN
     ADD_JOURNAL EXISTING @4 @11 @26 USING ~Dorn/English/BodhiAbduction.tra~
   END
 

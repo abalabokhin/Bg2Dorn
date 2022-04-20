@@ -149,17 +149,4 @@ SAY @755
 IF ~~ EXIT
 END
 
-INTERJECT GORAPP1 10 dornodren
-  == dornJ IF ~InParty("dorn")
-                 !StateCheck("dorn",CD_STATE_NOTVALID)
-                 GlobalLT("Chapter","GLOBAL",%bg2_chapter_8%)~ THEN @88
-END GORAPP1 11
-
-INTERJECT GORAPP1 10 dornodren
-  == dornJ IF ~InParty("dorn")
-                 !StateCheck("dorn",CD_STATE_NOTVALID)
-                 GlobalGT("Chapter","GLOBAL",%bg2_chapter_7%)~ THEN @89
-END GORAPP1 11
-
-
 END

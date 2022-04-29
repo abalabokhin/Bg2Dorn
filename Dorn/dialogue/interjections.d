@@ -150,3 +150,27 @@ IF ~~ EXIT
 END
 
 END
+
+INTERJECT GORAPP1 10 dornodren
+== dornJ IF ~InParty("dorn")
+!StateCheck("dorn",CD_STATE_NOTVALID)
+GlobalLT("Chapter","GLOBAL",%bg2_chapter_8%)~ THEN @88
+END GORAPP1 11
+
+INTERJECT GORAPP1 10 dornodren
+== dorn25J IF ~InParty("dorn")
+!StateCheck("dorn",CD_STATE_NOTVALID)
+GlobalGT("Chapter","GLOBAL",%bg2_chapter_7%)~ THEN @88
+END GORAPP1 11
+
+INTERJECT GORDEMO 1 dorndemog
+== dornJ IF ~InParty("dorn")
+!StateCheck("dorn",CD_STATE_NOTVALID)
+GlobalLT("Chapter","GLOBAL",%bg2_chapter_8%)~ THEN @89
+END GORDEMO 2
+
+INTERJECT GORDEMO 1 dorndemog
+== dorn25J IF ~InParty("dorn")
+!StateCheck("dorn",CD_STATE_NOTVALID)
+GlobalGT("Chapter","GLOBAL",%bg2_chapter_7%)~ THEN @89
+END GORDEMO 2

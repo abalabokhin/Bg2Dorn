@@ -314,19 +314,6 @@ INTERJECT ABAZIGAL 1 dobazigal
 END ABAZIGAL 2                 
 
 
-INTERJECT GORAPP1 10 dornodren
-  == dorn25J IF ~InParty("dorn")
-                 !StateCheck("dorn",CD_STATE_NOTVALID)
-                 GlobalLT("Chapter","GLOBAL",%bg2_chapter_8%)~ THEN @88
-END GORAPP1 11
-
-INTERJECT GORAPP1 10 dornodren
-  == dorn25J IF ~InParty("dorn")
-                 !StateCheck("dorn",CD_STATE_NOTVALID)
-                 GlobalGT("Chapter","GLOBAL",%bg2_chapter_7%)~ THEN @89
-END GORAPP1 11
-
-
 I_C_T HGNYA01 6 dornNyal
   == dorn25J IF ~InParty("dorn")
                  !StateCheck("dorn",CD_STATE_NOTVALID)~ THEN @90

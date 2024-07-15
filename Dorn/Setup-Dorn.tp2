@@ -20,7 +20,7 @@ ALWAYS
 END
 
 LANGUAGE ~English~ ~English~ ~Dorn/English/Setup-Dorn.tra~
-
+LANGUAGE ~Russian by Prostln~ ~Russian~ ~Dorn/Russian/Setup-Dorn.tra~
 
 // Dorn, by trinit
 BEGIN @0
